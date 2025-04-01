@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AFA ART DESIGN - GALAȚi</title>
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="magnific-popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <style>
+      /* Splash screen styles */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          font-family: Arial, sans-serif;
+          background-color: #ffffff;
+          overflow: hidden; /* Prevent scrolling during splash */
+      }
+
+      .intro {
+          position: fixed;
+          z-index: 1000;
+          width: 100%;
+          height: 100vh;
+          background-color: #161616;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+
+      .logo-header {
+          font-size: 2.5rem;
+          color: #ffffff;
+          display: flex;
+          gap: 10px;
+      }
+
+      .logo {
+          opacity: 0;
+          transform: translateY(50px);
+          display: inline-block;
+          transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+
+      .logo.show {
+          opacity: 1;
+          transform: translateY(0);
+      }
+
+      .logo.fade {
+          opacity: 0;
+          transform: translateY(-50px);
+          transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+
+      .hide-intro {
+          opacity: 0;
+          transform: translateY(-100%);
+          pointer-events: none;
+      }
+  </style>
+
+  </head>
+
+  
+  <body>
+
+    <div class="intro">
+      <h1 class="logo-header">
+          <span class="logo">Afa</span>
+          <span class="logo">Art</span>
+          <span class="logo">Design.</span>
+      </h1>
+  </div>
+
+  <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const intro = document.querySelector('.intro');
+    const logoSpans = document.querySelectorAll('.logo');
+
+    // Show letters one by one
+    logoSpans.forEach((span, idx) => {
+        setTimeout(() => {
+            span.classList.add('show');
+        }, idx * 400);
+    });
+
+    // Fade out letters after delay
+    setTimeout(() => {
+        logoSpans.forEach((span, idx) => {
+            setTimeout(() => {
+                span.classList.remove('show');
+                span.classList.add('fade');
+            }, idx * 200);
+        });
+    }, 2000);
+
+    // Remove splash screen smoothly and enable scrolling
+    setTimeout(() => {
+        intro.classList.add('hide-intro');
+        document.body.style.overflow = "auto"; // <== This enables scrolling
+    }, 3000);
+});
+
+    </script>
+
+       
+  <div id="content" style="display: none;">
+      <!-- Your main website content goes here -->
+  </div>
+
+
+    <!-- Hero section -->
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
+        <div class="container">   
+          <div class="tm-next">
+              <a href="#infinite" class="navbar-brand">Afa Art Design.</a>
+          </div>             
+            
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#infinite">Acasă</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#whatwedo">Ce facem noi?</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#gallery">Galerie</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#contact">Contact</a>
+              </li>                    
+            </ul>
+          </div>        
+        </div>
+      </nav>
+
+      <div class="text-center tm-hero-text-container">
+        <div class="tm-hero-text-container-inner">
+            <h2 class="tm-hero-title">Bine ați venit la AFA ART DESIGN</h2>
+            <p class="tm-hero-subtitle">
+              Distribuitor oficial Casa Ferrara în România.
+              <br><i class="fa fa-1x fa-map-marker-alt mr-1"></i>
+              Strada 1 Decembrie 1918, nr. 13, Galați
+            </p>
+        </div>        
+      </div>
+
+      <div class="tm-next tm-intro-next">
+        <a href="#whatwedo" class="text-center tm-down-arrow-link">
+          <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+        </a>
+      </div>      
+    </section>
+
+    <section id="whatwedo" class="tm-section-pad-top">
+      
+      <div class="container">
+
+            <div class="row tm-content-box"><!-- first row -->
+                <div class="col-lg-12 col-xl-12">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4 tm-section-title">Ce facem noi?</h2>
+                        <p class="mb-4 tm-intro-text">
+                        ↪️ Cam tot ce vrei ca să îți decorezi casa visurilor tale!</p>
+                    </div>
+                </div>
+
+            </div><!-- first row -->
+            
+            <div class="row tm-content-box"><!-- second row -->
+        		<div class="col-lg-1">
+                    <i class="fas fa-3x fa-paint-roller text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">Vopsea Decorativă Ferrara Design</h2>
+                        <p class="mb-4 tm-intro-text">Transformă-ți locuința cu vopsea decorativă premium! Aplicăm profesional finisaje din gama Ferrara Design, oferind un aspect sofisticat și durabil.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-1">
+                    <i class="fas fa-3x fa-layer-group text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">Parchet Premium & Elemente Decorative</h2>
+                        <p class="mb-4 tm-intro-text">Eleganță și durabilitate pentru casa ta! Comercializăm și montăm parchet SPC, parchet herringbone din gama Kronotex, parchet laminat din gama MyFloor Germania, riflaje decorative și profile platbandă din inox – detalii care fac diferența.</p>
+                    </div>
+                </div>
+
+            </div><!-- second row -->
+            
+            <div class="row tm-content-box"><!-- third row -->
+        		<div class="col-lg-1">
+                    <i class="fas fa-3x fa-fill-drip tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">Tencuială Decorativă Ferrara Design</h2>
+                        <p class="mb-4 tm-intro-text">Personalizează-ți pereții cu tencuiala decorativă Ferrara Design! Oferim soluții premium pentru un finisaj elegant și rezistent în timp.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-1">
+                    <i class="fas fa-3x fa-th-large tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                      <h2 class="tm-text-primary mb-4">Plăci Ceramice de Calitate & Montaj Profesional</h2>
+                        <p class="mb-4 tm-intro-text">Lux și rafinament în fiecare detaliu! Vă oferim plăci ceramice premium, alese pentru calitate și aspect exclusivist, alături de un montaj impecabil.</p>
+                    </div>
+                </div>
+
+            </div><!-- third row -->
+
+        </div>
+      
+    </section>
+    
+    <section id="testimonials" class="tm-section-pad-top tm-parallax-2">      
+      <div class="container tm-testimonials-content">
+        <div class="row">
+          <div class="col-lg-12 tm-content-box">
+            <h2 class="text-white text-center mb-4 tm-section-title">Hai să ne cunoaștem 😎</h2>
+            <p class="mx-auto tm-section-desc text-center"><em>„Singuri putem face atât de puțin, dar împreună putem realiza orice.”</em> – Helen Keller</p>
+            <div class="mx-auto tm-gallery-container tm-gallery-container-2">
+              <div class="tm-testimonials-carousel">
+                <figure class="tm-testimonial-item">
+                  <img src="img/testimonial-img-01.jpg" alt="Image" class="img-fluid mx-auto">
+                  <blockquote>citat reprezentativ</blockquote>
+                  <figcaption>Nume - functie</figcaption>
+                </figure>
+
+                <figure class="tm-testimonial-item">
+                  <img src="img/testimonial-img-02.jpg" alt="Image" class="img-fluid mx-auto">
+                  <blockquote>citat reprezentativ</blockquote>
+                  <figcaption>Nume - functie</figcaption>
+                </figure>
+
+                <figure class="tm-testimonial-item">
+                  <img src="img/testimonial-img-03.jpg" alt="Image" class="img-fluid mx-auto">
+                  <blockquote>citat reprezentativ</blockquote>
+                  <figcaption>Nume - functie</figcaption>
+                </figure>
+
+                <figure class="tm-testimonial-item">
+                  <img src="img/testimonial-img-04.jpg" alt="Image" class="img-fluid mx-auto">
+                  <blockquote>citat reprezentativ</blockquote>
+                  <figcaption>Nume - functie</figcaption>
+                </figure>
+
+                <figure class="tm-testimonial-item">
+                  <img src="img/testimonial-img-02.jpg" alt="Image" class="img-fluid mx-auto">
+                  <blockquote>citat reprezentativ</blockquote>
+                  <figcaption>Nume - functie</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tm-bg-overlay"></div>
+    </section>
+    
+    <section id="gallery" class="tm-section-pad-top">
+      <div class="container tm-container-gallery">
+        <div class="row">
+          <div class="text-center col-12">
+              <h2 class="tm-text-primary tm-section-title mb-4">Galerie</h2>
+              <p class="mx-auto tm-section-desc">
+                Uite câteva dintre cele mai tari lucrări ale noastre. Vopsele decorative, tencuieli, riflaje, parchet sau plăci ceramice premium – le facem pe toate să arate genial. Hai să te inspiri din proiectele noastre. 👀
+              </p>
+          </div>            
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mx-auto tm-gallery-container">
+                    <div class="grid tm-gallery">
+                      <a href="img/zen5.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/thumbnails/zen5tn.jpg" alt="Image 1" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Piatră Zen<span></span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/parchet1.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/thumbnails/parchet1tn.jpg" alt="Image 2" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Parchet<span></span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/piatrasp.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/thumbnails/piatrasptn.jpg" alt="Image 3" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Piatră Spartă<span></span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/stuccoven4.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/thumbnails/stuccoven4tn.jpg" alt="Image 4" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Stucco Veneziano<span></span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/psp1.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/thumbnails/psp1tn.jpg" alt="Image 5" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Piatră Spartă<span></span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/psp2.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/thumbnails/psp2tn.jpg" alt="Image 6" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Piatră Spartă<span></span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/psp3-2.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/thumbnails/psp3-2tn.jpg" alt="Image 7" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Piatră Spartă<span></span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/psp4.jpg">
+                        <figure class="effect-honey tm-gallery-item">
+                          <img src="img/thumbnails/psp4tn.jpg" alt="Image 8" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Piatră Spartă<span></span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                </div>                
+            </div>        
+          </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="tm-section-pad-top tm-parallax-2">
+      <div class="container tm-container-contact">
+        <div class="row">
+            <div class="text-center col-12">
+                <h2 class="tm-section-title mb-4">Contactează-ne</h2>
+                <p class="mb-5">
+                  Știm că îți imaginezi deja un proiect mișto pentru casa ta. 😎 
+                  <br>
+                  Dă-ne un semn dacă ai vreo întrebare despre vopsele, tencuieli decorative sau cum să folosești o unealtă – suntem aici să îți dăm o mână de ajutor și să îți oferim o ofertă personalizată! 🎨✨
+                </p><br>
+            </div>
+            
+            <div class="col-sm-12 col-md-6">
+              <form action="" method="get">
+                <input id="name" name="name" type="text" placeholder="Numele" class="tm-input" autocomplete="family-name" required />
+                <input id="email" name="email" type="email" placeholder="Email-ul" class="tm-input" autocomplete="email" required />
+                <textarea id="message" name="message" rows="8" placeholder="Mesajul tău" class="tm-input" required></textarea>
+                <button type="submit" class="btn tm-btn-submit">Trimite</button>
+              </form>
+            </div>
+            
+            <div class="col-sm-12 col-md-6">
+
+              <style>
+                /* Default styles for each social icon link */
+                .contact-item a {
+                    text-decoration: none;  /* Remove underline */
+                    color: inherit;         /* Inherit color from parent (default) */
+                    transition: color 0.3s ease;  /* Smooth transition for color change */
+                }
+        
+                /* Default color for icons (before hover) */
+
+        
+                /* WhatsApp Hover Effect */
+                .contact-item a[href*="wa.me"]:hover i {
+                    color: #18b34b;  /* Darker green for WhatsApp */
+                }
+        
+                /* Instagram Hover Effect */
+                .contact-item a[href*="instagram.com"]:hover i {
+                    color: #C13584;  /* Darker pink for Instagram */
+                }
+        
+                /* Facebook Hover Effect */
+                .contact-item a[href*="facebook.com"]:hover i {
+                    color: #2d57b3;  /* Darker blue for Facebook */
+                }
+        
+                /* TikTok Hover Effect */
+                .contact-item a[href*="tiktok.com"]:hover i {
+                    color: #313131;  /* Light blue/green for TikTok */
+                }
+        
+                /* Google Maps Hover Effect */
+                .contact-item a[href*="maps.app.goo.gl"]:hover i {
+                    color: #c95050;  /* Darker red-orange for Maps */
+                }
+            </style>
+
+              <div class="contact-item">
+                  <a rel="nofollow" href="https://wa.me/+40790323945" class="item-link" target="_blank">
+                      <i class="fab fa-2x fa-whatsapp mr-4"></i>
+                      <span class="mb-0">WhatsApp</span>
+                  </a>              
+              </div>
+              
+              <div class="contact-item">
+                  <a rel="nofollow" href="https://www.instagram.com/afaartdesign" class="item-link" target="_blank">
+                      <i class="fab fa-2x fa-instagram mr-4"></i>
+                      <span class="mb-0">Instagram</span>
+                  </a>              
+              </div>
+              
+              <div class="contact-item">
+                  <a rel="nofollow" href="https://www.facebook.com/profile.php?id=100075829431799" class="item-link" target="_blank">
+                      <i class="fab fa-2x fa-facebook mr-4"></i>
+                      <span class="mb-0">Facebook</span>
+                  </a>              
+              </div>
+              
+              <div class="contact-item">
+                  <a rel="nofollow" href="https://www.tiktok.com/@afaartdesign" class="item-link" target="_blank">
+                      <i class="fab fa-2x fa-tiktok mr-4"></i>
+                      <span class="mb-0">TikTok</span>
+                  </a>              
+              </div>
+
+              <div class="contact-item">
+                <a rel="nofollow" href="https://maps.app.goo.gl/48Nuk6GfGFjcPnEeA" class="item-link" target="_blank">
+                  <i class="fa fa-2x fa-map-marker-alt mr-4"></i>
+                  <span class="mb-0">Ne găsești aici!</span>
+                </a>
+              </div>
+              <div class="contact-item">&nbsp;</div>
+          </div>
+        </div><!-- row ending -->
+        
+      </div>
+        
+      	<footer class="text-center small tm-footer">
+          <p class="mb-0">
+            <ul class="legal-links">
+              <li><a href="politica-confidentialitate.html" target="_blank"><i class="fas fa-1x fa-file-import mr-1"></i>Politica de Confidențialitate</a></li>
+              <li><a href="termeni-conditii.html" target="_blank"><i class="fas fa-1x fa-file-import mr-1"></i>Termeni și Condiții</a></li>
+              <li><a href="politica-cookie.html" target="_blank"><i class="fas fa-1x fa-file-import mr-1"></i>Politica de Cookie-uri</a></li>
+            </ul>            
+          </p>
+          <p class="mb-0">
+          Copyright &copy; 2025 AFA ART DESIGN. 
+          <a rel="nofollow" href="https://instagram.com/andrei.nightfall" title="Andrei Pintilie" target="_blank" rel="noopener noreferrer">Designed by @andrei.nightfall</a></p>
+        </footer>
+
+    </section>
+    
+    <script src="js/jquery-1.9.1.min.js"></script>     
+    <script src="slick/slick.min.js"></script>
+    <script src="magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>     
+    <script src="js/bootstrap.min.js"></script> 
+    <script>
+
+      function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+
+        if(windowHeight > 500) {
+          _offset = 400;
+        } 
+        if(windowHeight > 680) {
+          _offset = 300
+        }
+        if(windowHeight > 830) {
+          _offset = 210;
+        }
+
+        return _offset;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+
+      // Parallax function
+      // Adapted based on https://codepen.io/roborich/pen/wpAsm        
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        // $object.css({"background-attatchment" : "fixed"});
+
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){          
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+        
+        $(window).scroll(function(){
+          if($(window).width() > 768) {
+            var firstTop = $object.offset().top,
+                pos = $(window).scrollTop(),
+                yPos = Math.round((multiplier * (firstTop - pos)) - 186);              
+
+            var bg_css = 'center ' + yPos + 'px';
+
+            $object.css({"background-position" : bg_css });
+          } else {
+            $object.css({"background-position" : "center" });
+          }
+        });
+      };
+      
+      $(function(){
+        // Hero Section - Background Parallax
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        background_image_parallax_2($("#contact"), 0.80);   
+        background_image_parallax_2($("#testimonials"), 0.80);   
+        
+        // Handle window resize
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function(e){          
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          } else {
+            $('.tm-navbar').removeClass("scroll");
+          }
+        });
+        
+        // Close mobile menu after click 
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show'); 
+        })
+
+        // Scroll to corresponding section with animation
+        $('#tmNav').singlePageNav({
+          'easing': 'easeInOutExpo',
+          'speed': 600
+        });        
+        
+        // Add smooth scrolling to all links
+        // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 600, 'easeInOutExpo', function(){
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        // Pop up
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+
+        $('.tm-testimonials-carousel').slick({
+          dots: true,
+          prevArrow: false,
+          nextArrow: false,
+          infinite: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            }, 
+            {
+              breakpoint: 480,
+              settings: {
+                  slidesToShow: 1
+              }                 
+            }
+          ]
+        });
+
+        // Gallery
+        $('.tm-gallery').slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+        });
+      });
+    </script>
+  </body>
+</html>
