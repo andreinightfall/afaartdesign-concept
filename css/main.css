@@ -7,16 +7,22 @@
   font-style: normal;
 }
 
-
+main {
+  flex: 1; /* Pushes the footer down */
+}
 
 body {
 	font-family: "Raleway", sans-serif;
 	font-size: 1.2em;
   color: #707070;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures full viewport height */
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
+
 a {
   transition: all 0.3s ease;
   color: #38B;
@@ -707,22 +713,29 @@ p {
 .legal-links {
   list-style-type: none;
   padding: 0;
-  margin: 0;
-  text-align: center; /* Center the entire list */
+  margin: 0 auto; /* Centers the list container */
+  max-width: 300px; /* Optional: Control width */
 }
 
 .legal-links li {
-  display: inline-block; /* Align items horizontally */
-  text-align: left; /* Align text and icon to the left */
-  margin: 10px 20px; /* Add space between the items (horizontal space between items) */
+  display: block; /* Make each item appear on a new line */
+  margin-bottom: 10px; /* Add space between list items */
+  text-align: left; /* Aligns text/icons properly */
 }
 
 .legal-links li a {
-  display: flex; /* Use flexbox to align the icon and text */
-  align-items: center; /* Vertically align the icon and text */
-  font-size: 16px; /* Adjust font size if needed */
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  text-decoration: none;
 }
 
 .legal-links li a i {
-  margin-right: 12px; /* Increased space between icon and text */
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.legal-links .copyright {
+  font-size: 14px;
+  text-align: center; /* Centers copyright text */
+  margin-top: 50px;
 }
