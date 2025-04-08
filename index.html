@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 
     <style>
       /* Splash screen styles */
@@ -124,7 +126,7 @@
 
 
     <!-- Hero section -->
-    <section id="home" class="text-white tm-font-big tm-parallax">
+    <section id="home" class="text-white tm-font-big tm-parallax" data-aos="fade-up">
       <!-- Navigation -->
       <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
         <div class="container">   
@@ -158,9 +160,9 @@
         <div class="tm-hero-text-container-inner">
             <h2 class="tm-hero-title">Bine ați venit la AFA ART DESIGN</h2>
             <p class="tm-hero-subtitle">
-              Distribuitor oficial Casa Ferrara în România.
+              Gresie, parchet, vopsea decorativă, plinte, cornișe, riflaje.
               <br><i class="fa fa-1x fa-map-marker-alt mr-1"></i>
-              Strada 1 Decembrie 1918, nr. 13, Galați
+              Showroom pe Strada 1 Decembrie 1918, nr. 13, Galați.
             </p>
         </div>        
       </div>
@@ -172,7 +174,7 @@
       </div>      
     </section>
 
-    <section id="whatwedo" class="tm-section-pad-top">
+    <section id="whatwedo" class="tm-section-pad-top" data-aos="fade-up">
       
       <div class="container">
 
@@ -237,7 +239,7 @@
       
     </section>
     
-    <section id="testimonials" class="tm-section-pad-top tm-parallax-2">      
+    <section id="testimonials" class="tm-section-pad-top tm-parallax-2" data-aos="fade-up">      
       <div class="container tm-testimonials-content">
         <div class="row">
           <div class="col-lg-12 tm-content-box">
@@ -282,7 +284,7 @@
       <div class="tm-bg-overlay"></div>
     </section>
     
-    <section id="gallery" class="tm-section-pad-top">
+    <section id="gallery" class="tm-section-pad-top" data-aos="fade-up">
       <div class="container tm-container-gallery">
         <div class="row">
           <div class="text-center col-12">
@@ -368,7 +370,7 @@
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="tm-section-pad-top tm-parallax-2">
+    <section id="contact" class="tm-section-pad-top tm-parallax-2" data-aos="fade-up">
       <div class="container tm-container-contact">
         <div class="row">
             <div class="text-center col-12">
@@ -669,5 +671,10 @@
         });
       });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
   </body>
 </html>
