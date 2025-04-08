@@ -88,7 +88,7 @@ blockquote {
   width: 100%;
   z-index: 1000;
   background-color: transparent;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
 }
 
 .tm-navbar.scroll {
@@ -128,26 +128,25 @@ blockquote {
   transition: color 0.3s ease;
 }
 
-/* Brush background image effect */
+/* Brush background effect */
 .tm-nav-link::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; /* Full width */
   height: 100%;
   background-image: url('/img/nav-brush-bg.png');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  opacity: 0; /* Initially, the brush is invisible */
+  transition: opacity 0.4s ease; /* Only transition opacity */
   z-index: -1;
 }
 
-.tm-nav-link:hover::before,
-.tm-navbar.scroll .tm-nav-link:hover::before {
-  opacity: 1;
+.tm-nav-link:hover::before {
+  opacity: 1; /* Fade in the brush background */
 }
 
 .tm-navbar.scroll .tm-nav-link {
@@ -160,25 +159,92 @@ blockquote {
   color: white;
 }
 
+/* Navbar Toggler */
 .navbar-toggler {
-  border: 1px solid white;
-  padding-left: 10px;
-  padding-right: 10px;
+  border: none;
+  background-color: transparent;
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1050;
+  cursor: pointer;
 }
 
-.navbar-toggler-icon {
-  color: white;
-  padding-top: 6px;
+.navbar-toggler span {
+  background-color: white;
+  height: 4px;
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.tm-navbar.scroll .navbar-toggler {
-  border: 1px solid #707070;
+.navbar-toggler.open span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
 }
 
-.tm-navbar.scroll .navbar-toggler-icon {
-  color: #707070;
+.navbar-toggler.open span:nth-child(2) {
+  opacity: 0;
 }
 
+.navbar-toggler.open span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Mobile navbar background and text color fixes */
+@media (max-width: 991px) {
+  .navbar-toggler {
+    background-color: transparent;
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    color: white;
+  }
+
+  /* Make the dropdown menu background transparent */
+  .navbar-collapse {
+    background-color: transparent; /* Transparent background for the mobile dropdown */
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* Links inside the navbar collapse */
+  .navbar-nav .nav-item .nav-link {
+    color: white !important; /* Ensure text is white for better contrast */
+    padding: 10px 15px;
+    text-align: left;
+  }
+
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #38B; /* Highlight color when hovered */
+    background-color: transparent; /* Keep the background transparent */
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-nav {
+    max-width: 200px;
+    text-align: right;
+  }
+
+  .navbar-collapse {
+    padding: 10px;
+    border-radius: 3px;
+  }
+
+  .navbar-collapse .nav-link {
+    color: #707070;
+    padding-right: 20px;
+  }
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+  padding-right: 30px;
+  padding-left: 30px;
+}
 
 
 /* Hero */
@@ -588,8 +654,8 @@ figure.effect-honey:hover h2 i {
 }
 
 .tm-input {
-	margin: 0 0 20px 0;
-	width: 90%;
+  margin: 0 0 20px 0;
+  width: 90%;
   padding: 8px 20px;
   border-radius: 6px;
   border: 1px solid white;
@@ -598,16 +664,16 @@ figure.effect-honey:hover h2 i {
 }
 
 .tm-btn-submit {
-	font-size: 0.9em;
-	color: #fff;
-	background-color: #369;
-	width: 50%;
-	margin-bottom: 60px;
+  font-size: 0.9em;
+  color: #fff;
+  background-color: #369;
+  width: 50%;
+  margin-bottom: 60px;
 }
 
 .tm-btn-submit:hover {
-	color: #fff;
-	background-color: #38B;
+  color: #fff;
+  background-color: #38B;
 }
 
 ::placeholder {
@@ -635,11 +701,11 @@ figure.effect-honey:hover h2 i {
 }
 
 .tm-footer a {
-	color: #fff;
+  color: #fff;
 }
 
 .tm-footer a:hover {
-	color: #9CF;
+  color: #9CF;
 }
 
 .tm-footer-link {
@@ -660,13 +726,8 @@ p {
   .tm-intro-text-container {
     padding-left: 0px;
   }
-
-  .navbar-expand-md .navbar-nav .nav-link {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
-
+} /* <-- This closing brace is missing */
+  
 @media (min-width: 1200px) {
   .container {
     max-width: 1275px;
@@ -699,25 +760,6 @@ p {
   .tm-btn-submit {
     margin-left: 0;
     margin-top: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-
-  .navbar-nav {
-    max-width: 200px;
-    text-align: right;
-  }
-
-  .navbar-collapse {
-    background-color: rgb(255, 255, 255);
-    padding: 10px;
-    border-radius: 3px;
-  }
-
-  .navbar-collapse .nav-link {
-    color: #707070;
-	padding-right: 20px;
   }
 }
 

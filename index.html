@@ -89,33 +89,33 @@
   </div>
 
   <script>
-        document.addEventListener("DOMContentLoaded", () => {
-    const intro = document.querySelector('.intro');
-    const logoSpans = document.querySelectorAll('.logo');
+            document.addEventListener("DOMContentLoaded", () => {
+        const intro = document.querySelector('.intro');
+        const logoSpans = document.querySelectorAll('.logo');
 
-    // Show letters one by one
-    logoSpans.forEach((span, idx) => {
-        setTimeout(() => {
-            span.classList.add('show');
-        }, idx * 400);
-    });
-
-    // Fade out letters after delay
-    setTimeout(() => {
+        // Show letters one by one
         logoSpans.forEach((span, idx) => {
             setTimeout(() => {
-                span.classList.remove('show');
-                span.classList.add('fade');
-            }, idx * 200);
+                span.classList.add('show');
+            }, idx * 400);
         });
-    }, 2000);
 
-    // Remove splash screen smoothly and enable scrolling
-    setTimeout(() => {
-        intro.classList.add('hide-intro');
-        document.body.style.overflow = "auto"; // <== This enables scrolling
-    }, 3000);
-});
+        // Fade out letters after delay
+        setTimeout(() => {
+            logoSpans.forEach((span, idx) => {
+                setTimeout(() => {
+                    span.classList.remove('show');
+                    span.classList.add('fade');
+                }, idx * 200);
+            });
+        }, 2000);
+
+        // Remove splash screen smoothly and enable scrolling
+        setTimeout(() => {
+            intro.classList.add('hide-intro');
+            document.body.style.overflow = "auto"; // <== This enables scrolling
+        }, 3000);
+    });
 
     </script>
 
@@ -128,33 +128,52 @@
     <!-- Hero section -->
     <section id="home" class="text-white tm-font-big tm-parallax" data-aos="fade-up">
       <!-- Navigation -->
-      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
-        <div class="container">   
+      <script>
+        // Scroll effect for navbar
+        window.onscroll = function() {
+          var navbar = document.getElementById("tmNav");
+          if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            navbar.classList.add("scroll");
+          } else {
+            navbar.classList.remove("scroll");
+          }
+        };
+      </script>
+
+      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
+        <div class="container">
           <div class="tm-next">
-              <a href="#home" class="navbar-brand">Afa Art Design.</a>
-          </div>             
-            
+            <a href="#home" class="navbar-brand">Afa Art Design.</a>
+          </div>
+          
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars navbar-toggler-icon"></i>
           </button>
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                  <a class="nav-link tm-nav-link" href="#home">Acasă</a>
+                <a class="nav-link tm-nav-link" href="#home">Acasă</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link tm-nav-link" href="#whatwedo">Ce facem noi?</a>
+                <a class="nav-link tm-nav-link" href="#whatwedo">Ce facem noi?</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link tm-nav-link" href="#gallery">Galerie</a>
+                <a class="nav-link tm-nav-link" href="#gallery">Galerie</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link tm-nav-link" href="#contact">Contact</a>
-              </li>                    
+                <a class="nav-link tm-nav-link" href="#contact">Contact</a>
+              </li>
             </ul>
-          </div>        
+          </div>
         </div>
       </nav>
+
+      <script>
+        document.querySelector('.navbar-toggler').addEventListener('click', function() {
+          this.classList.toggle('open');
+        });
+      </script>
 
       <div class="text-center tm-hero-text-container">
         <div class="tm-hero-text-container-inner">
@@ -675,6 +694,5 @@
     <script>
       AOS.init();
     </script>
-    
   </body>
 </html>
