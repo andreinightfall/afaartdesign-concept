@@ -50,7 +50,7 @@ diff --git a/magnific-popup/README.md b/magnific-popup/README.md
 +
 @@ -48,1 +48,1 @@
 -	git clone https://github.com/dimsemenov/Magnific-Popup.git
-+ git clone https://github.com/dimsemenov/Magnific-Popup.git
++	git clone <https://github.com/dimsemenov/Magnific-Popup.git>
 @@ -52,1 +52,1 @@
 -	cd Magnific-Popup && npm install
 + cd Magnific-Popup && npm install
@@ -59,4 +59,4 @@ diff --git a/magnific-popup/README.md b/magnific-popup/README.md
 + grunt
 @@ -79,1 +79,1 @@
 -Please report bugs via GitHub and ask general questions through [Stack Overflow](http://stackoverflow.com/questions/tagged/magnific-popup). Feel free to submit commit [pull-request](https://github.com/dimsemenov/Magnific-Popup/pulls), even the tiniest contributions to the script or to the documentation are very welcome.
-+
++Please report bugs via GitHub and ask general questions through [Stack Overflow](http://stackoverflow.com/questions/tagged/magnific-popup). Feel free to submit commit [pull-request](https://github.com/dimsemenov/Magnific-Popup/pulls), even the tiniest contributions to the script or to the documentation are very welcome.

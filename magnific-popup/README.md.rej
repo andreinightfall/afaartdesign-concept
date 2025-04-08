@@ -1,0 +1,17 @@
+--- magnific-popup/README.md
++++ magnific-popup/README.md
+@@ -35 +35 @@
+-
++
+@@ -48 +48 @@
+-	git clone https://github.com/dimsemenov/Magnific-Popup.git
++	git clone <https://github.com/dimsemenov/Magnific-Popup.git>
+@@ -52 +52 @@
+-	cd Magnific-Popup && npm install
++ cd Magnific-Popup && npm install
+@@ -56 +56 @@
+-	grunt
++ grunt
+@@ -79 +79 @@
+-Please report bugs via GitHub and ask general questions through [Stack Overflow](http://stackoverflow.com/questions/tagged/magnific-popup). Feel free to submit commit [pull-request](https://github.com/dimsemenov/Magnific-Popup/pulls), even the tiniest contributions to the script or to the documentation are very welcome.
++Please report bugs via GitHub and ask general questions through [Stack Overflow](http://stackoverflow.com/questions/tagged/magnific-popup). Feel free to submit commit [pull-request](https://github.com/dimsemenov/Magnific-Popup/pulls), even the tiniest contributions to the script or to the documentation are very welcome.

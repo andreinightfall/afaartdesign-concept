@@ -1,0 +1,11 @@
+--- slick/slick.js
++++ slick/slick.js
+@@ -2 +2 @@
+-;(function(factory) {
++(function(factory) {
+@@ -601 +601 @@
+-                if (_.breakpoints.hasOwnProperty(breakpoint)) {
++                if (Object.prototype.hasOwnProperty.call(_.breakpoints, breakpoint)) {
+@@ -1856 +1856 @@
+-                if (responsiveSettings.hasOwnProperty(breakpoint)) {
++                if (Object.prototype.hasOwnProperty.call(responsiveSettings, breakpoint)) {

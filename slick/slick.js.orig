@@ -1,5 +1,5 @@
 /* global window, document, define, jQuery, setInterval, clearInterval */
-(function(factory) {
+;(function(factory) {
     'use strict';
     if (typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
@@ -598,7 +598,7 @@
             targetBreakpoint = null;
 
             for (breakpoint in _.breakpoints) {
-                if (Object.prototype.hasOwnProperty.call(_.breakpoints, breakpoint)) {
+                if (_.breakpoints.hasOwnProperty(breakpoint)) {
                     if (_.originalSettings.mobileFirst === false) {
                         if (respondToWidth < _.breakpoints[breakpoint]) {
                             targetBreakpoint = _.breakpoints[breakpoint];
@@ -1853,7 +1853,7 @@
 
                 l = _.breakpoints.length-1;
 
-                if (Object.prototype.hasOwnProperty.call(responsiveSettings, breakpoint)) {
+                if (responsiveSettings.hasOwnProperty(breakpoint)) {
                     currentBreakpoint = responsiveSettings[breakpoint].breakpoint;
 
                     // loop through the breakpoints and cut out any existing
