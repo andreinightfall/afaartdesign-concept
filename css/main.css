@@ -1,16 +1,6 @@
 
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
 
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-main {
-  flex: 1; /* Pushes the footer down */
-}
-
 body {
 	font-family: "Raleway", sans-serif;
 	font-size: 1.2em;
@@ -69,18 +59,6 @@ blockquote {
   font-size: 1.25rem;
 }
 
-.tm-btn-primary {
-  color: white;
-  background-color: #369;
-  padding: 14px 30px;
-}
-
-.tm-btn-primary:hover,
-.tm-btn-primary:focus {
-  color: white;
-  background-color: #38B;
-}
-
 /* Navbar */
 
 .tm-navbar {
@@ -91,11 +69,6 @@ blockquote {
   transition: background-color 0.3s ease, border-bottom 0.3s ease; /* Smooth transition */
 }
 
-.tm-navbar.scroll {
-  background-color: white;
-  border-bottom: 1px solid #e9ecef;
-}
-
 .navbar-brand {
   color: white;
   font-size: 1.4rem;
@@ -103,13 +76,8 @@ blockquote {
   text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-brand:hover,
-.tm-navbar.scroll .navbar-brand:hover {
+.navbar-brand:hover {
   color: #38B;
-}
-
-.tm-navbar.scroll .navbar-brand {
-  color: #369;
 }
 
 .nav-item {
@@ -149,12 +117,6 @@ blockquote {
   opacity: 1; /* Fade in the brush background */
 }
 
-.tm-navbar.scroll .tm-nav-link {
-  color: #369;
-}
-
-.tm-navbar.scroll .tm-nav-link:hover,
-.tm-navbar.scroll .tm-nav-link.current,
 .tm-nav-link:hover {
   color: white;
 }
@@ -171,26 +133,6 @@ blockquote {
   align-items: center;
   z-index: 1050;
   cursor: pointer;
-}
-
-.navbar-toggler span {
-  background-color: white;
-  height: 4px;
-  width: 100%;
-  border-radius: 5px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.navbar-toggler.open span:nth-child(1) {
-  transform: rotate(45deg) translateY(8px);
-}
-
-.navbar-toggler.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.navbar-toggler.open span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-8px);
 }
 
 /* Mobile navbar background and text color fixes */
@@ -349,10 +291,6 @@ blockquote {
 
 /* Introduction */
 
-#introduction {
-  padding-bottom: 100px;
-}
-
 .tm-section-title {
   font-size: 2.6rem;
   font-weight: normal;
@@ -365,10 +303,6 @@ blockquote {
 .tm-icon {
   display: block;
   color: #37A;
-}
-
-.tm-continue {
-	padding: 20px 0 30px 0;
 }
 
 /* Testimonials */
@@ -446,37 +380,6 @@ blockquote {
   margin: 0 15px;
 }
 
-.slick-dots {
-  bottom: -65px;
-}
-
-.slick-dots li {
-  margin: 0 13px;
-}
-
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before,
-.slick-dots li.slick-active button:before {
-  opacity: 1;
-  color: #3ba0dd;
-}
-
-.tm-testimonials-carousel .slick-dots li button:before {
-  color: white;
-  opacity: 0.5;
-}
-
-.tm-testimonials-carousel .slick-dots li button:hover:before,
-.tm-testimonials-carousel .slick-dots li button:focus:before,
-.tm-testimonials-carousel .slick-dots li.slick-active button:before {
-  color: white;
-  opacity: 1;
-}
-
-.slick-dots li button:before {
-  font-size: 18px;
-}
-
 /* Hover Effect */
 /* Common style */
 .grid figure {
@@ -510,8 +413,7 @@ blockquote {
   pointer-events: none;
 }
 
-.grid figure figcaption,
-.grid figure figcaption > a {
+.grid figure figcaption {
   position: absolute;
   top: 0;
   left: 0;
@@ -521,13 +423,6 @@ blockquote {
 
 /* Anchor will cover the whole item by default */
 /* For some effects it will show as a button */
-.grid figure figcaption > a {
-  z-index: 1000;
-  text-indent: 200%;
-  white-space: nowrap;
-  font-size: 0;
-  opacity: 0;
-}
 
 .grid figure h2 {
   word-spacing: -0.15em;
@@ -539,14 +434,8 @@ blockquote {
   font-weight: 600;
 }
 
-.grid figure h2,
-.grid figure p {
+.grid figure h2 {
   margin: 0;
-}
-
-.grid figure p {
-  letter-spacing: 1px;
-  font-size: 68.5%;
 }
 
 /*---------------*/
@@ -676,12 +565,6 @@ figure.effect-honey:hover h2 i {
   background-color: #38B;
 }
 
-::placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-  opacity: 1; /* Firefox */
-}
-
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   color: white;
@@ -690,32 +573,6 @@ figure.effect-honey:hover h2 i {
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: white;
-}
-
-.tm-footer {
-  position: absolute;
-  bottom: 35px;
-  left: 0;
-  right: 0;
-  padding: 0 15px;
-}
-
-.tm-footer a {
-  color: #fff;
-}
-
-.tm-footer a:hover {
-  color: #9CF;
-}
-
-.tm-footer-link {
-  color: white;
-}
-
-.tm-footer-link:hover,
-.tm-footer-link:focus {
-  color: #38B;
-  text-decoration: none;
 }
 
 p {
@@ -751,12 +608,6 @@ p {
     margin-right: auto;
   }
 
-  .tm-intro-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .tm-btn-submit {
     margin-left: 0;
     margin-top: 20px;
@@ -772,10 +623,6 @@ p {
 
   .tm-gallery-container-2 {
     max-width: 350px;
-  }
-
-  .slick-dots li {
-    margin: 0 8px;
   }
 
   .tm-gallery-item {
