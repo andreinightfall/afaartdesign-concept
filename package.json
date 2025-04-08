@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "magnific-popup": "^1.2.0"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4"
   }
 }
