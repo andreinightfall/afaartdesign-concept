@@ -1,12 +1,13 @@
 (function() {
-  // Default to the local version.
   var path = '../libs/jquery/jquery.js';
-  // Get any jquery=___ param from the query string.
-  var jqversion = location.search.match(/[?&]jquery=(.*?)(?=&|$)/);
-  // If a version was specified, use that version from code.jquery.com.
-  if (jqversion) {
-    path = 'http://code.jquery.com/jquery-' + jqversion[1] + '.js';
+  var match = location.search.match(/[?&]jquery=([^&]+)/);
+  if (match) {
+    var version = encodeURIComponent(match[1]); // Sanitize input
+    path = 'https://code.jquery.com/jquery-' + version + '.js';
   }
-  // This is the only time I'll ever use document.write, I promise!
-  document.write('<script src="' + path + '"></script>');
-}());
+
+  var script = document.createElement('script');
+  script.src = path;
+  script.async = false; // Make sure it's blocking like document.write was
+  document.head.appendChild(script);
+})();
