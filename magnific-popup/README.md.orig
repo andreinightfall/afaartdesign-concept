@@ -45,15 +45,15 @@ To compile Magnific Popup by yourself, first of make sure that you have [Node.js
 
 1) Copy repository
 
-	git clone <https://github.com/dimsemenov/Magnific-Popup.git>
+	git clone https://github.com/dimsemenov/Magnific-Popup.git
 
 2) Go inside Magnific Popup folder that you fetched and install Node dependencies
 
- cd Magnific-Popup && npm install
+	cd Magnific-Popup && npm install
 
 3) Now simply run `grunt` to generate JS and CSS in folder `dist` and site in folder `_site/`.
 
- grunt
+	grunt
 
 Optionally:
 
