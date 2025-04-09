@@ -7,11 +7,12 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    /* Ensures full viewport height */
     margin: 0;
     padding: 0;
     overflow-x: hidden;
 }
+
+/* Links */
 
 a {
     transition: all 0.3s ease;
@@ -28,6 +29,8 @@ a:focus {
     outline: none;
 }
 
+/* Buttons */
+
 .btn {
     padding: 8px 32px;
 }
@@ -35,6 +38,8 @@ a:focus {
 .btn:hover {
     background-color: #ced4da;
 }
+
+/* Typography */
 
 blockquote {
     font-size: 0.86em;
@@ -61,13 +66,25 @@ blockquote {
 
 /* Navbar */
 
+/* For the header or the nav container */
 .tm-navbar {
     position: fixed;
-    width: 100%;
+    top: 0;
+    left: 0; /* Ensures it starts at the very left edge */
+    right: 0; /* Ensures it spans to the very right edge */
+    width: 100vw; /* Full viewport width */
     z-index: 1000;
-    background-color: transparent;
+    background-image: url('/img/nav-bg.png'); /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire navbar */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
+    background-color: transparent; /* Ensure background image is visible */
     transition: background-color 0.3s ease, border-bottom 0.3s ease;
-    /* Smooth transition */
+}
+
+
+.tm-navbar.scroll {
+    background-color: rgba(34, 34, 34, 0.95);
 }
 
 .navbar-brand {
@@ -86,7 +103,6 @@ blockquote {
     text-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Nav links */
 .tm-nav-link {
     color: white;
     position: relative;
@@ -97,29 +113,24 @@ blockquote {
     transition: color 0.3s ease;
 }
 
-/* Brush background effect */
 .tm-nav-link::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
     background-image: url('/img/nav-brush-bg.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     opacity: 0;
-    /* Initially, the brush is invisible */
     transition: opacity 0.4s ease;
-    /* Only transition opacity */
     z-index: -1;
 }
 
 .tm-nav-link:hover::before {
     opacity: 1;
-    /* Fade in the brush background */
 }
 
 .tm-nav-link:hover {
@@ -127,6 +138,7 @@ blockquote {
 }
 
 /* Navbar Toggler */
+
 .navbar-toggler {
     border: none;
     background-color: transparent;
@@ -140,7 +152,8 @@ blockquote {
     cursor: pointer;
 }
 
-/* Mobile navbar background and text color fixes */
+/* Mobile Styles */
+
 @media (max-width: 991px) {
     .navbar-toggler {
         background-color: transparent;
@@ -151,27 +164,20 @@ blockquote {
         color: white;
     }
 
-    /* Make the dropdown menu background transparent */
     .navbar-collapse {
-        background-color: transparent;
-        /* Transparent background for the mobile dropdown */
         padding-top: 10px;
         padding-bottom: 10px;
     }
 
-    /* Links inside the navbar collapse */
     .navbar-nav .nav-item .nav-link {
         color: white !important;
-        /* Ensure text is white for better contrast */
         padding: 10px 15px;
         text-align: left;
     }
 
     .navbar-nav .nav-item .nav-link:hover {
         color: #38B;
-        /* Highlight color when hovered */
         background-color: transparent;
-        /* Keep the background transparent */
     }
 }
 
@@ -197,8 +203,7 @@ blockquote {
     padding-left: 30px;
 }
 
-
-/* Hero */
+/* Hero Section */
 
 #home {
     background-color: #222;
@@ -207,8 +212,8 @@ blockquote {
     height: 100vh;
     min-height: 375px;
     position: relative;
+    padding-top: 80px; /* Ensures content starts below fixed navbar */
 }
-
 
 @media (min-height: 600px) and (min-width: 1920px) {
     #home {
@@ -252,6 +257,22 @@ blockquote {
     margin-top: -90px;
 }
 
+@media (max-width: 768px) {
+    .tm-hero-text-container-inner {
+        padding: 0 1.5rem;
+        text-align: center;
+        margin-top: -40px;
+    }
+
+    .tm-hero-title {
+        font-size: 2.2rem;
+    }
+
+    .tm-hero-subtitle {
+        font-size: 1rem;
+    }
+}
+
 .tm-hero-title {
     font-size: 3.5rem;
     text-shadow: 2px 2px 2px #333;
@@ -277,6 +298,8 @@ blockquote {
         bottom: 20px;
     }
 }
+
+/* Down Arrow */
 
 .tm-down-arrow-link {
     display: block;
@@ -642,23 +665,17 @@ p {
 }
 
 /* Legal links */
-
 .legal-links {
     list-style-type: none;
     padding: 0;
     margin: 0 auto;
-    /* Centers the list container */
-    max-width: 300px;
-    /* Optional: Control width */
+    max-width: 300px; /* Optional: Control width */
 }
 
 .legal-links li {
     display: block;
-    /* Make each item appear on a new line */
     margin-bottom: 10px;
-    /* Add space between list items */
     text-align: left;
-    /* Aligns text/icons properly */
 }
 
 .legal-links li a {
@@ -670,12 +687,89 @@ p {
 
 .legal-links li a i {
     margin-right: 10px;
-    /* Space between icon and text */
 }
 
 .legal-links .copyright {
     font-size: 14px;
     text-align: center;
-    /* Centers copyright text */
     margin-top: 50px;
+}
+
+/* Social Links */
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 350px; /* Optional: Adjust width */
+    margin-bottom: 20px; /* Space between social links and legal links */
+    padding-top: 10px;
+}
+
+.social-links li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.social-links li a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.social-links li a i {
+    margin-right: 10px;
+    width: 24px; /* Fixed size for icons */
+    height: 24px; /* Fixed size for icons */
+    display: inline-block;
+    text-align: center; /* Ensures icon is centered */
+}
+
+/* WhatsApp Hover Effect */
+.social-links li a[href*="wa.me"]:hover i {
+    color: #18b34b; /* Green */
+}
+
+/* Instagram Hover Effect */
+.social-links li a[href*="instagram.com"]:hover i {
+    color: #C13584; /* Instagram pinkish */
+}
+
+/* Facebook Hover Effect */
+.social-links li a[href*="facebook.com"]:hover i {
+    color: #2d57b3; /* Facebook blue */
+}
+
+/* TikTok Hover Effect */
+.social-links li a[href*="tiktok.com"]:hover i {
+    color: #313131; /* TikTok black */
+}
+
+/* Google Maps Hover Effect */
+.social-links li a[href*="maps.app.goo.gl"]:hover i {
+    color: #c95050; /* Red for Google Maps */
+}
+
+/* Phone Hover Effect */
+.social-links li a[href*="tel:"]:hover i {
+    color: #18b34b; /* Green color for phone */
+}
+
+/* Responsive Design for Social Links */
+@media (max-width: 767px) {
+    .social-links {
+        max-width: 90%;
+    }
+
+    .social-links li a {
+        font-size: 14px;
+    }
+
+    .social-links li i {
+        font-size: 1.3rem;
+    }
 }

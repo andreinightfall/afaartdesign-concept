@@ -410,89 +410,77 @@
                     </form>
                 </div>
 
-                <div class="col-sm-12 col-md-6">
-
-                    <style>
-                        /* Default styles for each social icon link */
-                        .contact-item a {
-                            text-decoration: none;
-                            /* Remove underline */
-                            color: inherit;
-                            /* Inherit color from parent (default) */
-                            transition: color 0.3s ease;
-                            /* Smooth transition for color change */
-                        }
-
-                        /* Default color for icons (before hover) */
-
-
-                        /* WhatsApp Hover Effect */
-                        .contact-item a[href*="wa.me"]:hover i {
-                            color: #18b34b;
-                            /* Darker green for WhatsApp */
-                        }
-
-                        /* Instagram Hover Effect */
-                        .contact-item a[href*="instagram.com"]:hover i {
-                            color: #C13584;
-                            /* Darker pink for Instagram */
-                        }
-
-                        /* Facebook Hover Effect */
-                        .contact-item a[href*="facebook.com"]:hover i {
-                            color: #2d57b3;
-                            /* Darker blue for Facebook */
-                        }
-
-                        /* TikTok Hover Effect */
-                        .contact-item a[href*="tiktok.com"]:hover i {
-                            color: #313131;
-                            /* Light blue/green for TikTok */
-                        }
-
-                        /* Google Maps Hover Effect */
-                        .contact-item a[href*="maps.app.goo.gl"]:hover i {
-                            color: #c95050;
-                            /* Darker red-orange for Maps */
-                        }
-                    </style>
-
-                    <div class="contact-item">
-                        <a rel="nofollow" href="https://wa.me/+40790323945" class="item-link" target="_blank">
-                            <i class="fab fa-2x fa-whatsapp mr-4"></i>
-                            <span class="mb-0">WhatsApp</span>
-                        </a>
-                    </div>
-
-                    <div class="contact-item">
-                        <a rel="nofollow" href="https://www.instagram.com/afaartdesign" class="item-link" target="_blank">
-                            <i class="fab fa-2x fa-instagram mr-4"></i>
-                            <span class="mb-0">Instagram</span>
-                        </a>
-                    </div>
-
-                    <div class="contact-item">
-                        <a rel="nofollow" href="https://www.facebook.com/profile.php?id=100075829431799" class="item-link" target="_blank"> 
-                            <i class="fab fa-2x fa-facebook mr-4"></i>
-                            <span class="mb-0">Facebook</span>
-                        </a>
-                    </div>
-
-                    <div class="contact-item">
-                        <a rel="nofollow" href="https://www.tiktok.com/@afaartdesign" class="item-link" target="_blank">
-                            <i class="fab fa-2x fa-tiktok mr-4"></i>
-                            <span class="mb-0">TikTok</span>
-                        </a>
-                    </div>
-
-                    <div class="contact-item">
-                        <a rel="nofollow" href="https://maps.app.goo.gl/48Nuk6GfGFjcPnEeA" class="item-link" target="_blank">
-                            <i class="fa fa-2x fa-map-marker-alt mr-4"></i>
-                            <span class="mb-0">Ne găsești aici!</span>
-                        </a>
-                    </div>
-                    <div class="contact-item">&nbsp;</div>
+                <!-- Social Links Section -->
+                <div class="col-sm-12 col-md-6 mx-auto">
+                    <ul class="social-links"> <!-- Changed class to social-links -->
+                        <li class="contact-item">
+                            <a rel="nofollow" href="https://wa.me/+40790323945" class="item-link" target="_blank">
+                                <div class="icon-column">
+                                    <i class="fab fa-2x fa-whatsapp mr-4"></i>
+                                </div>
+                                <div class="text-column">
+                                    <span class="mb-0">WhatsApp</span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="contact-item">
+                            <a rel="nofollow" href="https://www.instagram.com/afaartdesign" class="item-link" target="_blank">
+                                <div class="icon-column">
+                                    <i class="fab fa-2x fa-instagram mr-4"></i>
+                                </div>
+                                <div class="text-column">
+                                    <span class="mb-0">Instagram</span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="contact-item">
+                            <a rel="nofollow" href="https://www.facebook.com/profile.php?id=100075829431799" class="item-link" target="_blank">
+                                <div class="icon-column">
+                                    <i class="fab fa-2x fa-facebook mr-4"></i>
+                                </div>
+                                <div class="text-column">
+                                    <span class="mb-0">Facebook</span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="contact-item">
+                            <a rel="nofollow" href="https://www.tiktok.com/@afaartdesign" class="item-link" target="_blank">
+                                <div class="icon-column">
+                                    <i class="fab fa-2x fa-tiktok mr-4"></i>
+                                </div>
+                                <div class="text-column">
+                                    <span class="mb-0">TikTok</span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="contact-item">
+                            <a rel="nofollow" href="https://maps.app.goo.gl/48Nuk6GfGFjcPnEeA" class="item-link" target="_blank">
+                                <div class="icon-column">
+                                    <i class="fa fa-2x fa-map-marker-alt mr-4"></i>
+                                </div>
+                                <div class="text-column">
+                                    <span class="mb-0">Ne găsești aici!</span>
+                                </div>
+                            </a>
+                        </li>
+                        
+                        <li class="contact-item">
+                            <a rel="nofollow" href="tel:+40790323945" class="item-link" target="_blank">
+                                <div class="icon-column">
+                                    <i class="fas fa-2x fa-phone-alt mr-4"></i>
+                                </div>
+                                <div class="text-column">
+                                    <span class="mb-0">Telefon: +40790323945</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
+
             </div><!-- row ending -->
 
             <div class="row">
@@ -508,6 +496,7 @@
         </div>
 
     </section>
+
 
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="slick/slick.min.js"></script>
