@@ -337,6 +337,100 @@ blockquote {
     color: #37A;
 }
 
+/* Promoții Section */
+#promotii {
+    color: white;
+    background-image: url(../img/pexels-eva-bronzini-7640904.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+@media (max-width: 991px) {
+    #promotii {
+        background: transparent;
+        background-image: url(../img/pexels-eva-bronzini-7640904.jpg);
+    }
+}
+
+#promotii .tm-bg-overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 70, 80, 0.2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#promotii .container {
+    position: relative;
+    z-index: 1;
+}
+
+#promotii .border {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+#promotii .shadow-sm {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+#promotii h3 {
+    color: #fff;
+}
+
+#promotii p {
+    color: #eee;
+}
+
+/* Card Styling */
+#promotii .card {
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+#promotii .card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+#promotii .card h3,
+#promotii .card p {
+    transition: color 0.3s ease;
+}
+
+#promotii .card:hover h3,
+#promotii .card:hover p {
+    color: #fff;
+}
+
+/* Overlay for Darkening Effect */
+#promotii .card .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+#promotii .card:hover .card-overlay {
+    opacity: 0.6;
+}
+
 /* Testimonials */
 #testimonials {
     color: white;
