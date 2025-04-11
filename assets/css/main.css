@@ -13,7 +13,6 @@ body {
 }
 
 /* Links */
-
 a {
     transition: all 0.3s ease;
     color: #38B;
@@ -30,7 +29,6 @@ a:focus {
 }
 
 /* Buttons */
-
 .btn {
     padding: 8px 32px;
 }
@@ -40,7 +38,6 @@ a:focus {
 }
 
 /* Typography */
-
 blockquote {
     font-size: 0.86em;
     line-height: 1.8em;
@@ -65,23 +62,21 @@ blockquote {
 }
 
 /* Navbar */
-
-/* For the header or the nav container */
 .tm-navbar {
     position: fixed;
     top: 0;
-    left: 0; /* Ensures it starts at the very left edge */
-    right: 0; /* Ensures it spans to the very right edge */
-    width: 100vw; /* Full viewport width */
+    left: 0;
+    right: 0;
+    width: 100vw;
     z-index: 1000;
-    background-image: url('../img/nav-bg.png'); /* Set the background image */
-    background-size: cover; /* Ensure the image covers the entire navbar */
-    background-position: center; /* Center the image */
+    background-image: url('../img/nav-bg.png');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    background-color: transparent; /* Ensure background image is visible */
-    transition: background-color 0.3s ease, border-bottom 0.3s ease;
+    background-color: rgba(34, 34, 34, 0.95); /* Fallback background color */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow to navbar */
+    transition: background-color 0.3s ease, border-bottom 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 .tm-navbar.scroll {
     background-color: rgba(34, 34, 34, 0.95);
@@ -110,7 +105,7 @@ blockquote {
     padding: 10px 20px;
     z-index: 1;
     overflow: hidden;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, opacity 0.3s ease;
 }
 
 .tm-nav-link::before {
@@ -137,8 +132,12 @@ blockquote {
     color: white;
 }
 
-/* Navbar Toggler */
+.tm-nav-link:focus {
+    color: white;
+    opacity: 1;
+}
 
+/* Navbar Toggler */
 .navbar-toggler {
     border: none;
     background-color: transparent;
@@ -152,32 +151,39 @@ blockquote {
     cursor: pointer;
 }
 
+.navbar-toggler-icon {
+    color: white;
+}
+
+/* Sticky Header */
+.sticky-header {
+    position: sticky; /* Sticky header stays at the top of the viewport */
+    top: 0;
+    z-index: 1050; /* Ensure sticky header stays above others */
+    background-color: rgba(34, 34, 34, 0.95);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sticky-header.scroll {
+    background-color: rgba(34, 34, 34, 0.98);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
 /* Mobile Styles */
-
 @media (max-width: 991px) {
-    .navbar-toggler {
-        background-color: transparent;
-        border: none;
-    }
-
-    .navbar-toggler-icon {
-        color: white;
-    }
-
     .navbar-collapse {
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding: 10px 15px; /* Add consistent padding */
+        text-align: right;
     }
 
     .navbar-nav .nav-item .nav-link {
         color: white !important;
         padding: 2px 10px;
-        text-align: left;
     }
 
     .navbar-nav .nav-item .nav-link:hover {
         color: #38B;
-        background-color: transparent;
     }
 }
 
@@ -212,7 +218,8 @@ blockquote {
     height: 100vh;
     min-height: 375px;
     position: relative;
-    padding-top: 80px; /* Ensures content starts below fixed navbar */
+    padding-top: 80px;
+    /* Ensures content starts below fixed navbar */
 }
 
 @media (min-height: 600px) and (min-width: 1920px) {
@@ -763,7 +770,8 @@ p {
     list-style-type: none;
     padding: 0;
     margin: 0 auto;
-    max-width: 300px; /* Optional: Control width */
+    max-width: 300px;
+    /* Optional: Control width */
 }
 
 .legal-links li {
@@ -794,8 +802,10 @@ p {
     list-style-type: none;
     padding: 0;
     margin: 0 auto;
-    max-width: 350px; /* Optional: Adjust width */
-    margin-bottom: 20px; /* Space between social links and legal links */
+    max-width: 350px;
+    /* Optional: Adjust width */
+    margin-bottom: 20px;
+    /* Space between social links and legal links */
     padding-top: 10px;
 }
 
@@ -817,40 +827,49 @@ p {
 
 .social-links li a i {
     margin-right: 10px;
-    width: 24px; /* Fixed size for icons */
-    height: 24px; /* Fixed size for icons */
+    width: 24px;
+    /* Fixed size for icons */
+    height: 24px;
+    /* Fixed size for icons */
     display: inline-block;
-    text-align: center; /* Ensures icon is centered */
+    text-align: center;
+    /* Ensures icon is centered */
 }
 
 /* WhatsApp Hover Effect */
 .social-links li a[href*="wa.me"]:hover i {
-    color: #18b34b; /* Green */
+    color: #18b34b;
+    /* Green */
 }
 
 /* Instagram Hover Effect */
 .social-links li a[href*="instagram.com"]:hover i {
-    color: #C13584; /* Instagram pinkish */
+    color: #C13584;
+    /* Instagram pinkish */
 }
 
 /* Facebook Hover Effect */
 .social-links li a[href*="facebook.com"]:hover i {
-    color: #2d57b3; /* Facebook blue */
+    color: #2d57b3;
+    /* Facebook blue */
 }
 
 /* TikTok Hover Effect */
 .social-links li a[href*="tiktok.com"]:hover i {
-    color: #313131; /* TikTok black */
+    color: #313131;
+    /* TikTok black */
 }
 
 /* Google Maps Hover Effect */
 .social-links li a[href*="maps.app.goo.gl"]:hover i {
-    color: #c95050; /* Red for Google Maps */
+    color: #c95050;
+    /* Red for Google Maps */
 }
 
 /* Phone Hover Effect */
 .social-links li a[href*="tel:"]:hover i {
-    color: #18b34b; /* Green color for phone */
+    color: #18b34b;
+    /* Green color for phone */
 }
 
 /* Responsive Design for Social Links */
@@ -866,4 +885,180 @@ p {
     .social-links li i {
         font-size: 1.3rem;
     }
+}
+
+/* Splash screen styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    overflow: hidden;
+    /* Prevent scrolling during splash */
+}
+
+.intro {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    background-color: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.logo-header {
+    font-size: 2.5rem;
+    color: #ffffff;
+    display: flex;
+    gap: 10px;
+}
+
+.logo {
+    opacity: 0;
+    transform: translateY(50px);
+    display: inline-block;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.logo.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.logo.fade {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hide-intro {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+}
+
+
+body {
+    background-color: rgba(173, 216, 230, 0.2);
+    /* Very light and transparent blue */
+}
+
+#shop-hero {
+    background-image: url('../img/shop-hero.jpg');
+    /* Replace with appropriate image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 375px;
+    position: relative;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    /* Light grey background */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow by default */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Stronger shadow on hover */
+}
+
+.card-title {
+    color: #37A;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #707070;
+}
+
+.tm-section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Add this rule to ensure vertical scrolling is enabled */
+html,
+body {
+    overflow-y: auto;
+    /* Allow vertical scrolling */
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+}
+
+/* Modal */
+.modal-backdrop {
+    position: fixed;
+    z-index: 1040 !important;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Add semi-transparent background */
+}
+
+.modal {
+    position: fixed;
+    z-index: 1050 !important;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-item-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Keyframes for bounce effect */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+/* Add bounce animation to the Magazin button */
+.animated-button {
+    display: inline-block;
+    animation: bounce 2s infinite; /* Animation runs every 2 seconds indefinitely */
+    transition: all 0.3s ease;
+}
+
+/* Optional: Hover effect to enhance interaction */
+.animated-button:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    animation: none; /* Pause animation on hover */
 }

@@ -19,66 +19,6 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="./assets/icons/favicon.ico">
 
-
-    <style>
-        /* Splash screen styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ffffff;
-            overflow: hidden;
-            /* Prevent scrolling during splash */
-        }
-
-        .intro {
-            position: fixed;
-            z-index: 1000;
-            width: 100%;
-            height: 100vh;
-            background-color: #161616;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-
-        .logo-header {
-            font-size: 2.5rem;
-            color: #ffffff;
-            display: flex;
-            gap: 10px;
-        }
-
-        .logo {
-            opacity: 0;
-            transform: translateY(50px);
-            display: inline-block;
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .logo.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .logo.fade {
-            opacity: 0;
-            transform: translateY(-50px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .hide-intro {
-            opacity: 0;
-            transform: translateY(-100%);
-            pointer-events: none;
-        }
-    </style>
-
 </head>
 
 
@@ -92,41 +32,7 @@
         </h1>
     </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const intro = document.querySelector('.intro');
-            const logoSpans = document.querySelectorAll('.logo');
-
-            // Show letters one by one
-            logoSpans.forEach((span, idx) => {
-                setTimeout(() => {
-                    span.classList.add('show');
-                }, idx * 400);
-            });
-
-            // Fade out letters after delay
-            setTimeout(() => {
-                logoSpans.forEach((span, idx) => {
-                    setTimeout(() => {
-                        span.classList.remove('show');
-                        span.classList.add('fade');
-                    }, idx * 200);
-                });
-            }, 2000);
-
-            // Remove splash screen smoothly and enable scrolling
-            setTimeout(() => {
-                intro.classList.add('hide-intro');
-                document.body.style.overflow = "auto"; // <== This enables scrolling
-            }, 3000);
-        });
-    </script>
-
-
-    <div id="content" style="display: none;">
-        <!-- Your main website content goes here -->
-    </div>
-
+    <script src="assets/js/splash.js"></script>
 
     <!-- Hero section -->
     <section id="home" class="text-white tm-font-big tm-parallax" data-aos="fade-up">
@@ -159,8 +65,13 @@
                             <a class="nav-link tm-nav-link" href="#home">Acasă</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link tm-nav-link animated-button" href="shop.html">
+                                Magazin Online <i class="fa fa-star text-warning ml-1"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link tm-nav-link" href="#promotii">Promoții</a>
-                          </li>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link tm-nav-link" href="#whatwedo">Ce facem noi?</a>
                         </li>
@@ -212,7 +123,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- PROMO CARD ROW -->
             <div class="row tm-content-box">
                 <!-- Promo 1 -->
@@ -223,7 +134,7 @@
                         <p>---</p>
                     </div>
                 </div>
-    
+
                 <!-- Promo 2 -->
                 <div class="col-lg-6 mb-4">
                     <div class="card">
@@ -233,11 +144,11 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Add more promo cards as needed -->
         </div>
-    </section>    
-      
+    </section>
+
     <section id="whatwedo" class="tm-section-pad-top" data-aos="fade-up">
 
         <div class="container">
@@ -467,7 +378,7 @@
                                 </div>
                             </a>
                         </li>
-                        
+
                         <li class="contact-item">
                             <a rel="nofollow" href="https://www.instagram.com/afaartdesign" class="item-link" target="_blank">
                                 <div class="icon-column">
@@ -478,7 +389,7 @@
                                 </div>
                             </a>
                         </li>
-                        
+
                         <li class="contact-item">
                             <a rel="nofollow" href="https://www.facebook.com/profile.php?id=100075829431799" class="item-link" target="_blank">
                                 <div class="icon-column">
@@ -489,7 +400,7 @@
                                 </div>
                             </a>
                         </li>
-                        
+
                         <li class="contact-item">
                             <a rel="nofollow" href="https://www.tiktok.com/@afaartdesign" class="item-link" target="_blank">
                                 <div class="icon-column">
@@ -500,7 +411,7 @@
                                 </div>
                             </a>
                         </li>
-                        
+
                         <li class="contact-item">
                             <a rel="nofollow" href="https://maps.app.goo.gl/48Nuk6GfGFjcPnEeA" class="item-link" target="_blank">
                                 <div class="icon-column">
@@ -511,7 +422,7 @@
                                 </div>
                             </a>
                         </li>
-                        
+
                         <li class="contact-item">
                             <a rel="nofollow" href="tel:+40790323945" class="item-link" target="_blank">
                                 <div class="icon-column">
@@ -540,7 +451,6 @@
         </div>
 
     </section>
-
 
     <script src="assets/js/jquery-1.9.1.min.js"></script>
     <script src="slick/slick.min.js"></script>
@@ -744,6 +654,7 @@
     <script>
         AOS.init();
     </script>
+
 </body>
 
 </html>

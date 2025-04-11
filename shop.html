@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Afa Art Design - Vopsire decorativă, plăci ceramice, tencuieli decorative și parchet în Galați, și nu numai. Oferim soluții personalizate și de calitate pentru un interior modern. Contactează-ne pentru oferte speciale!">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AFA ART DESIGN - GALAȚi</title>
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="magnific-popup/dist/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="./assets/icons/favicon.ico">
+
+</head>
+
+
+<body>
+
+    <!-- Header Section -->
+    <script>
+        // Scroll effect for navbar
+        window.onscroll = function() {
+            var navbar = document.getElementById("tmNav");
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                navbar.classList.add("scroll");
+            } else {
+                navbar.classList.remove("scroll");
+            }
+        };
+    </script>
+    <!-- Navigation -->
+    <header class="sticky-header">
+        <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
+            <div class="container">
+                <div class="tm-next">
+                    <a href="index.html" class="navbar-brand">Afa Art Design</a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Comută navigarea">
+                    <i class="fas fa-bars navbar-toggler-icon"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html#home">Acasă</a></li>
+                        <li class="nav-item"><a class="nav-link tm-nav-link" href="#vopsea">Vopsele Decorative</a></li>
+                        <li class="nav-item"><a class="nav-link tm-nav-link" href="#placi">Plăci Ceramice</a></li>
+                        <li class="nav-item"><a class="nav-link tm-nav-link" href="#tencuieli">Tencuieli Decorative</a></li>
+                        <li class="nav-item"><a class="nav-link tm-nav-link" href="#parchet">Parchet</a></li>
+                        <li class="nav-item"><a class="nav-link tm-nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item">
+                            <script>
+                                $(document).ready(function () {
+                                    $('#cartModal').on('show.bs.modal', function () {
+                                        // Ensure modal-backdrop is behind the modal
+                                        $('.modal-backdrop').css('z-index', 1040);
+                                        $('.modal').css('z-index', 1050);
+                                    });
+                                });
+                            </script>
+                            <a class="nav-link tm-nav-link cart-icon" href="#" data-toggle="modal" data-target="#cartModal">
+                                <i class="fas fa-shopping-cart"></i> Coș (<span id="cart-count">0</span>)
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+        <script>
+            window.onscroll = function () {
+                var header = document.querySelector('.sticky-header');
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    header.classList.add('scroll');
+                } else {
+                    header.classList.remove('scroll');
+                }
+            };
+        </script>
+    </header>
+
+    <section id="shop-hero" class="text-white tm-font-big tm-parallax" data-aos="fade-up">
+    <script>
+        document.querySelector('.navbar-toggler').addEventListener('click', function() {
+            this.classList.toggle('open');
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <div class="tm-hero-text-container-inner">
+        <h2 class="tm-hero-title">Bine ați venit in magazinul nostru!</h2>
+        <p class="tm-hero-subtitle">
+            Descoperă o gamă largă de produse premium: gresie, parchet, vopsea decorativă, plinte, cornișe, riflaje.
+        </p>
+
+        <div class="tm-next tm-intro-next">
+            <a href="#vopsea" class="text-center tm-down-arrow-link">
+                <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+            </a>
+        </div>
+
+    </div>
+    </section>
+
+    <section id="promotii" class="tm-section-pad-top" data-aos="fade-up">
+        <div class="container">
+            <div class="row tm-content-box">
+                <div class="col-lg-12">
+                    <div class="tm-intro-text-container">
+                        <h2 class="text-white mb-4 tm-section-title">Promoții</h2>
+                        <p class="mb-4 tm-intro-text">
+                            Profită de reducerile lunii! Găsește cele mai bune oferte pentru plăci ceramice premium! 🚀
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROMO CARD ROW -->
+            <div class="row tm-content-box">
+                <!-- Promo 1 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-overlay"></div> <!-- Overlay for darkening effect -->
+                        <h3 class="tm-text-primary">Promo 1</h3>
+                        <p>---</p>
+                    </div>
+                </div>
+
+                <!-- Promo 2 -->
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-overlay"></div>
+                        <h3 class="tm-text-primary">Promo 2</h3>
+                        <p>---</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more promo cards as needed -->
+        </div>
+    </section>
+
+    <!-- Shop Sections -->
+
+    <section id="products" class="tm-section-pad-top" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center tm-section-title">Produse</h2>
+            <div class="row">
+                <!-- Vopsele Decorative -->
+                <div class="col-12">
+                    <h3 class="category-title">Vopsele Decorative</h3>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img src="assets/img/vopsea1.jpg" class="card-img-top" alt="Vopsea Decorativă 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Vopsea Decorativă 1</h5>
+                            <p class="card-text">Preț: 100.00 RON</p>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="vopsea-1">
+                                <i class="fas fa-cart-plus"></i> Adaugă în coș
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img src="assets/img/vopsea2.jpg" class="card-img-top" alt="Vopsea Decorativă 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Vopsea Decorativă 2</h5>
+                            <p class="card-text">Preț: 120.00 RON</p>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="vopsea-2">
+                                <i class="fas fa-cart-plus"></i> Adaugă în coș
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Plăci Ceramice -->
+                <div class="col-12">
+                    <h3 class="category-title">Plăci Ceramice</h3>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img src="assets/img/placi1.jpg" class="card-img-top" alt="Placă Ceramică 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Placă Ceramică 1</h5>
+                            <p class="card-text">Preț: 80.00 RON</p>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="placi-1">
+                                <i class="fas fa-cart-plus"></i> Adaugă în coș
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img src="assets/img/placi2.jpg" class="card-img-top" alt="Placă Ceramică 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Placă Ceramică 2</h5>
+                            <p class="card-text">Preț: 90.00 RON</p>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="placi-2">
+                                <i class="fas fa-cart-plus"></i> Adaugă în coș
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Tencuieli Decorative -->
+                <div class="col-12">
+                    <h3 class="category-title">Tencuieli Decorative</h3>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img src="assets/img/tencuieli1.jpg" class="card-img-top" alt="Tencuială Decorativă 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Tencuială Decorativă 1</h5>
+                            <p class="card-text">Preț: 110.00 RON</p>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="tencuieli-1">
+                                <i class="fas fa-cart-plus"></i> Adaugă în coș
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img src="assets/img/tencuieli2.jpg" class="card-img-top" alt="Tencuială Decorativă 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Tencuială Decorativă 2</h5>
+                            <p class="card-text">Preț: 130.00 RON</p>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="tencuieli-2">
+                                <i class="fas fa-cart-plus"></i> Adaugă în coș
+                            </button>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Parchet -->
+                <div class="col-12">
+                    <h3 class="category-title">Parchet</h3>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img src="assets/img/parchet.jpg" class="card-img-top" alt="Parchet 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Parchet 1</h5>
+                            <p class="card-text">Preț: 150.00 RON</p>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="parchet-1">
+                                <i class="fas fa-cart-plus"></i> Adaugă în coș
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img src="assets/img/parchet2.jpg" class="card-img-top" alt="Parchet 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Parchet 2</h5>
+                            <p class="card-text">Preț: 170.00 RON</p>
+                            <button class="btn btn-primary add-to-cart-btn" data-id="parchet-2">
+                                <i class="fas fa-cart-plus"></i> Adaugă în coș
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="tm-section-pad-top tm-parallax-2" data-aos="fade-up">
+        <div class="container tm-container-contact">
+            <div class="row">
+                <div class="text-center col-12">
+                    <h2 class="tm-section-title mb-4">Contactează-ne</h2>
+                    <p class="mb-5">
+                        Dacă ai vreo întrebare despre vopsele, tencuieli decorative sau cum să folosești o unealtă – suntem aici să îți dăm o mână de ajutor și să îți oferim o ofertă personalizată! 🎨✨
+                    </p><br>
+                </div>
+
+                <div class="col-sm-12 col-md-6">
+                    <form action="https://formspree.io/f/manepnvl" method="POST">
+                        <input id="name" name="name" type="text" placeholder="Numele" class="tm-input" autocomplete="family-name" required />
+                        <input id="email" name="email" type="email" placeholder="Email-ul" class="tm-input" autocomplete="email" required />
+                        <input id="phone" name="phone" type="tel" placeholder="Numărul de telefon" class="tm-input" autocomplete="tel" />
+                        <textarea id="message" name="message" rows="8" placeholder="Mesajul tău" class="tm-input" required></textarea>
+                        <button type="submit" class="btn tm-btn-submit">Trimite</button>
+                    </form>
+                </div>
+
+                <!-- Social Links Section -->
+                <div class="col-sm-12 col-md-6 mx-auto">
+                    <ul class="social-links"> <!-- Changed class to social-links -->
+                        <li class="contact-item">
+                            <a rel="nofollow" href="https://wa.me/+40790323945" class="item-link" target="_blank">
+                                <div class="icon-column">
+                                    <i class="fab fa-1x fa-whatsapp mr-4"></i>
+                                </div>
+                                <div class="text-column">
+                                    <span class="mb-0">WhatsApp</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="contact-item">
+                            <a rel="nofollow" href="https://www.instagram.com/afaartdesign" class="item-link" target="_blank">
+                                <div class="icon-column">
+                                    <i class="fab fa-1x fa-instagram mr-4"></i>
+                                </div>
+                                <div class="text-column">
+                                    <span class="mb-0">Instagram</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="contact-item">
+                            <a rel="nofollow" href="https://www.facebook.com/profile.php?id=100075829431799" class="item-link" target="_blank">
+                                <div class="icon-column">
+                                    <i class="fab fa-1x fa-facebook mr-4"></i>
+                                </div>
+                                <div class="text-column">
+                                    <span class="mb-0">Facebook</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="contact-item">
+                            <a rel="nofollow" href="https://www.tiktok.com/@afaartdesign" class="item-link" target="_blank">
+                                <div class="icon-column">
+                                    <i class="fab fa-1x fa-tiktok mr-4"></i>
+                                </div>
+                                <div class="text-column">
+                                    <span class="mb-0">TikTok</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="contact-item">
+                            <a rel="nofollow" href="https://maps.app.goo.gl/48Nuk6GfGFjcPnEeA" class="item-link" target="_blank">
+                                <div class="icon-column">
+                                    <i class="fa fa-1x fa-map-marker-alt mr-4"></i>
+                                </div>
+                                <div class="text-column">
+                                    <span class="mb-0">Ne găsești aici!</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="contact-item">
+                            <a rel="nofollow" href="tel:+40790323945" class="item-link" target="_blank">
+                                <div class="icon-column">
+                                    <i class="fas fa-1x fa-phone-alt mr-4"></i>
+                                </div>
+                                <div class="text-column">
+                                    <span class="mb-0">Telefon: +40790323945</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div><!-- row ending -->
+
+            <div class="row">
+                <div class="col-sm-12 col-md-6 mx-auto"> <!-- mx-auto centers it -->
+                    <ul class="legal-links">
+                        <li><a href="politica-confidentialitate.html" target="_blank"><i class="fas fa-1x fa-file-import"></i> Politica de Confidențialitate</a></li>
+                        <li><a href="termeni-conditii.html" target="_blank"><i class="fas fa-1x fa-file-import"></i> Termeni și Condiții</a></li>
+                        <li><a href="politica-cookie.html" target="_blank"><i class="fas fa-1x fa-file-import"></i> Politica de Cookie-uri</a></li>
+                        <li class="copyright">Copyright &copy; 2025 AFA ART DESIGN, cu sediul pe Strada 1 Decembrie 1918, nr. 13, Galați, România.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Coșul tău</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Închide">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="cart-items"></div>
+                    <hr>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5>Total:</h5>
+                        <h5 id="cart-total">0 RON</h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="clear-cart" class="btn btn-danger">Golește coșul</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Închide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/easing.min.js"></script>
+    <script src="assets/js/jquery.singlePageNav.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
+        function getOffSet() {
+            var _offset = 450;
+            var windowHeight = window.innerHeight;
+
+            if (windowHeight > 500) {
+                _offset = 400;
+            }
+            if (windowHeight > 680) {
+                _offset = 300
+            }
+            if (windowHeight > 830) {
+                _offset = 210;
+            }
+
+            return _offset;
+        }
+
+        function setParallaxPosition($doc, multiplier, $object) {
+            var offset = getOffSet();
+            var from_top = $doc.scrollTop(),
+                bg_css = 'center ' + (multiplier * from_top - offset) + 'px';
+            $object.css({
+                "background-position": bg_css
+            });
+        }
+
+        // Parallax function
+        // Adapted based on https://codepen.io/roborich/pen/wpAsm
+        var background_image_parallax = function($object, multiplier, forceSet) {
+            multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+            multiplier = 1 - multiplier;
+            var $doc = $(document);
+            // $object.css({"background-attatchment" : "fixed"});
+
+            if (forceSet) {
+                setParallaxPosition($doc, multiplier, $object);
+            } else {
+                $(window).scroll(function() {
+                    setParallaxPosition($doc, multiplier, $object);
+                });
+            }
+        };
+
+        var background_image_parallax_2 = function($object, multiplier) {
+            multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+            multiplier = 1 - multiplier;
+            var $doc = $(document);
+            $object.css({
+                "background-attachment": "fixed"
+            });
+
+            $(window).scroll(function() {
+                if ($(window).width() > 768) {
+                    var firstTop = $object.offset().top,
+                        pos = $(window).scrollTop(),
+                        yPos = Math.round((multiplier * (firstTop - pos)) - 186);
+
+                    var bg_css = 'center ' + yPos + 'px';
+
+                    $object.css({
+                        "background-position": bg_css
+                    });
+                } else {
+                    $object.css({
+                        "background-position": "center"
+                    });
+                }
+            });
+        };
+
+        $(function() {
+            // Hero Section - Background Parallax
+            background_image_parallax($(".tm-parallax"), 0.30, false);
+            background_image_parallax_2($("#contact"), 0.80);
+            background_image_parallax_2($("#testimonials"), 0.80);
+
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                background_image_parallax($(".tm-parallax"), 0.30, true);
+            }, true);
+
+            // Detect window scroll and update navbar
+            $(window).scroll(function(e) {
+                if ($(document).scrollTop() > 120) {
+                    $('.tm-navbar').addClass("scroll");
+                } else {
+                    $('.tm-navbar').removeClass("scroll");
+                }
+            });
+
+            // Close mobile menu after click
+            $('#tmNav a').on('click', function() {
+                $('.navbar-collapse').removeClass('show');
+            })
+
+            // Scroll to corresponding section with animation
+            $('#tmNav').singlePageNav({
+                'easing': 'easeInOutExpo',
+                'speed': 600
+            });
+
+            // Add smooth scrolling to all links
+            // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+            $("a").on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 600, 'easeInOutExpo', function() {
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            // Pop up
+            $('.tm-gallery').magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                gallery: {
+                    enabled: true
+                }
+            });
+
+            $('.tm-testimonials-carousel').slick({
+                dots: true,
+                prevArrow: false,
+                nextArrow: false,
+                infinite: false,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                responsive: [{
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            // Gallery
+            $('.tm-gallery').slick({
+                dots: true,
+                infinite: false,
+                slidesToShow: 5,
+                slidesToScroll: 2,
+                responsive: [{
+                        breakpoint: 1199,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 767,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        // Shopping Cart Implementation
+        document.addEventListener("DOMContentLoaded", () => {
+            // Cart state
+            let cart = [];
+        
+            // Add to cart functionality
+            const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+            addToCartButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const productId = button.dataset.id;
+                    const productName = button.parentElement.querySelector(".card-title").textContent;
+                    const productPrice = parseFloat(button.parentElement.querySelector(".card-text").textContent.replace(/[^\d.]/g, "")) || 0;
+                    const productImage = button.parentElement.parentElement.querySelector("img").src;
+        
+                    // Check if product is already in cart
+                    const existingProduct = cart.find((item) => item.id === productId);
+        
+                    if (existingProduct) {
+                        existingProduct.quantity++;
+                    } else {
+                        cart.push({ id: productId, name: productName, price: productPrice, image: productImage, quantity: 1 });
+                    }
+        
+                    updateCartCount();
+                    renderCartItems();
+                });
+            });
+        
+            // Update cart count
+            const updateCartCount = () => {
+                const cartCount = document.querySelector("#cart-count");
+                cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
+            };
+        
+            // Render cart items in modal
+            const renderCartItems = () => {
+                const cartContainer = document.querySelector("#cart-items");
+                const cartTotal = document.querySelector("#cart-total");
+                cartContainer.innerHTML = "";
+                let total = 0;
+        
+                if (cart.length === 0) {
+                    cartContainer.innerHTML = "<p>Coșul tău este gol.</p>";
+                } else {
+                    cart.forEach((item, index) => {
+                        const itemTotal = item.price * item.quantity;
+                        total += itemTotal;
+        
+                        const cartItem = `
+                            <div class="cart-item d-flex justify-content-between align-items-center mb-3">
+                                <div class="d-flex align-items-center">
+                                    <img src="${item.image}" alt="${item.name}" class="cart-item-image" style="width: 50px; height: 50px; margin-right: 10px;">
+                                    <div>
+                                        <h6>${item.name}</h6>
+                                        <p>RON${item.price.toFixed(2)} x ${item.quantity}</p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn btn-sm btn-danger remove-item-btn" data-index="${index}">Remove</button>
+                                </div>
+                            </div>
+                        `;
+                        cartContainer.innerHTML += cartItem;
+                    });
+                }
+        
+                cartTotal.textContent = `RON${total.toFixed(2)}`;
+        
+                // Add event listeners for remove buttons
+                const removeButtons = document.querySelectorAll(".remove-item-btn");
+                removeButtons.forEach((button) => {
+                    button.addEventListener("click", () => {
+                        const itemIndex = button.dataset.index;
+                        cart.splice(itemIndex, 1);
+                        updateCartCount();
+                        renderCartItems();
+                    });
+                });
+            };
+        
+            // Clear cart
+            const clearCartButton = document.querySelector("#clear-cart");
+            clearCartButton.addEventListener("click", () => {
+                cart = [];
+                updateCartCount();
+                renderCartItems();
+            });
+        });
+        </script>
+
+</body>
+
+</html>
