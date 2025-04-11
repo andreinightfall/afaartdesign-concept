@@ -25,17 +25,7 @@
 <body>
 
     <!-- Header Section -->
-    <script>
-        // Scroll effect for navbar
-        window.onscroll = function() {
-            var navbar = document.getElementById("tmNav");
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                navbar.classList.add("scroll");
-            } else {
-                navbar.classList.remove("scroll");
-            }
-        };
-    </script>
+   
     <!-- Navigation -->
     <header class="sticky-header">
         <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
@@ -56,15 +46,6 @@
                         <li class="nav-item"><a class="nav-link tm-nav-link" href="#parchet">Parchet</a></li>
                         <li class="nav-item"><a class="nav-link tm-nav-link" href="#contact">Contact</a></li>
                         <li class="nav-item">
-                            <script>
-                                $(document).ready(function () {
-                                    $('#cartModal').on('show.bs.modal', function () {
-                                        // Ensure modal-backdrop is behind the modal
-                                        $('.modal-backdrop').css('z-index', 1040);
-                                        $('.modal').css('z-index', 1050);
-                                    });
-                                });
-                            </script>
                             <a class="nav-link tm-nav-link cart-icon" href="#" data-toggle="modal" data-target="#cartModal">
                                 <i class="fas fa-shopping-cart"></i> Coș (<span id="cart-count">0</span>)
                             </a>
@@ -74,34 +55,19 @@
                 
             </div>
         </nav>
-        <script>
-            window.onscroll = function () {
-                var header = document.querySelector('.sticky-header');
-                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-                    header.classList.add('scroll');
-                } else {
-                    header.classList.remove('scroll');
-                }
-            };
-        </script>
     </header>
 
-    <section id="shop-hero" class="text-white tm-font-big tm-parallax" data-aos="fade-up">
-    <script>
-        document.querySelector('.navbar-toggler').addEventListener('click', function() {
-            this.classList.toggle('open');
-        });
-    </script>
+    <section id="shop-hero" class="text-white tm-font-big">
 
     <!-- Hero Section -->
     <div class="tm-hero-text-container-inner">
-        <h2 class="tm-hero-title">Bine ați venit in magazinul nostru!</h2>
+        <h2 class="tm-hero-title">Bine ați venit în magazinul nostru online!</h2>
         <p class="tm-hero-subtitle">
             Descoperă o gamă largă de produse premium: gresie, parchet, vopsea decorativă, plinte, cornișe, riflaje.
         </p>
 
         <div class="tm-next tm-intro-next">
-            <a href="#vopsea" class="text-center tm-down-arrow-link">
+            <a href="#promotii" class="text-center tm-down-arrow-link">
                 <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
             </a>
         </div>
@@ -109,7 +75,7 @@
     </div>
     </section>
 
-    <section id="promotii" class="tm-section-pad-top" data-aos="fade-up">
+    <section id="promotii" class="tm-section-pad-top">
         <div class="container">
             <div class="row tm-content-box">
                 <div class="col-lg-12">
@@ -487,7 +453,7 @@
             // Hero Section - Background Parallax
             background_image_parallax($(".tm-parallax"), 0.30, false);
             background_image_parallax_2($("#contact"), 0.80);
-            background_image_parallax_2($("#testimonials"), 0.80);
+            background_image_parallax_2($("#promotii"), 0.80);
 
             // Handle window resize
             window.addEventListener('resize', function() {
@@ -747,6 +713,44 @@ document.addEventListener("DOMContentLoaded", () => {
                         });
                     }
                 });
+            };
+        </script>
+        <script>
+            // Modal displays correctly
+            $(document).ready(function () {
+                $('#cartModal').on('show.bs.modal', function () {
+                    // Ensure modal-backdrop is behind the modal
+                    $('.modal-backdrop').css('z-index', 1040);
+                    $('.modal').css('z-index', 1050);
+                });
+            });
+        </script>
+        <script>
+            // Sticky header
+            window.onscroll = function () {
+                var header = document.querySelector('.sticky-header');
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    header.classList.add('scroll');
+                } else {
+                    header.classList.remove('scroll');
+                }
+            };
+        </script>
+        <script>
+            // Responsive nav bars
+            document.querySelector('.navbar-toggler').addEventListener('click', function() {
+                this.classList.toggle('open');
+            });
+        </script>
+        <script>
+            // Scroll effect for navbar
+            window.onscroll = function() {
+                var navbar = document.getElementById("tmNav");
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    navbar.classList.add("scroll");
+                } else {
+                    navbar.classList.remove("scroll");
+                }
             };
         </script>
 
