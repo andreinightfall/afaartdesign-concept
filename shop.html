@@ -49,7 +49,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html#home">Acasă</a></li>
+                        <li class="nav-item"><a class="nav-link tm-nav-link" href="index.html">Acasă</a></li>
                         <li class="nav-item"><a class="nav-link tm-nav-link" href="#vopsea">Vopsele Decorative</a></li>
                         <li class="nav-item"><a class="nav-link tm-nav-link" href="#placi">Plăci Ceramice</a></li>
                         <li class="nav-item"><a class="nav-link tm-nav-link" href="#tencuieli">Tencuieli Decorative</a></li>
@@ -508,12 +508,6 @@
                 $('.navbar-collapse').removeClass('show');
             })
 
-            // Scroll to corresponding section with animation
-            $('#tmNav').singlePageNav({
-                'easing': 'easeInOutExpo',
-                'speed': 600
-            });
-
             // Add smooth scrolling to all links
             // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
             $("a").on('click', function(event) {
@@ -609,54 +603,71 @@
         AOS.init();
     </script>
     <script>
-        // Shopping Cart Implementation
-        document.addEventListener("DOMContentLoaded", () => {
-            // Cart state
-            let cart = [];
-        
-            // Add to cart functionality
-            const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
+// Shopping Cart Implementation
+document.addEventListener("DOMContentLoaded", () => {
+    // Cart state
+    let cart = [];
+
+    // Load cart from local storage
+    const loadCartFromStorage = () => {
+        const storedCart = localStorage.getItem("cart");
+        if (storedCart) {
+            cart = JSON.parse(storedCart); // Parse the stored JSON string into an array
+        }
+    };
+
+    // Save cart to local storage
+    const saveCartToStorage = () => {
+        localStorage.setItem("cart", JSON.stringify(cart)); // Convert the cart array to a JSON string
+    };
+
+    // Initialize cart from local storage
+    loadCartFromStorage();
+
+    // Add to cart functionality
+        const addToCartButtons = document.querySelectorAll(".add-to-cart-btn");
             addToCartButtons.forEach((button) => {
                 button.addEventListener("click", () => {
                     const productId = button.dataset.id;
                     const productName = button.parentElement.querySelector(".card-title").textContent;
                     const productPrice = parseFloat(button.parentElement.querySelector(".card-text").textContent.replace(/[^\d.]/g, "")) || 0;
                     const productImage = button.parentElement.parentElement.querySelector("img").src;
-        
+
                     // Check if product is already in cart
                     const existingProduct = cart.find((item) => item.id === productId);
-        
+
                     if (existingProduct) {
                         existingProduct.quantity++;
                     } else {
                         cart.push({ id: productId, name: productName, price: productPrice, image: productImage, quantity: 1 });
                     }
-        
+
+                    saveCartToStorage(); // Save updated cart to local storage
                     updateCartCount();
                     renderCartItems();
                 });
             });
-        
+
             // Update cart count
             const updateCartCount = () => {
                 const cartCount = document.querySelector("#cart-count");
                 cartCount.textContent = cart.reduce((total, item) => total + item.quantity, 0);
             };
-        
+
             // Render cart items in modal
             const renderCartItems = () => {
                 const cartContainer = document.querySelector("#cart-items");
                 const cartTotal = document.querySelector("#cart-total");
                 cartContainer.innerHTML = "";
                 let total = 0;
-        
+
                 if (cart.length === 0) {
                     cartContainer.innerHTML = "<p>Coșul tău este gol.</p>";
                 } else {
                     cart.forEach((item, index) => {
                         const itemTotal = item.price * item.quantity;
                         total += itemTotal;
-        
+
                         const cartItem = `
                             <div class="cart-item d-flex justify-content-between align-items-center mb-3">
                                 <div class="d-flex align-items-center">
@@ -667,36 +678,76 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <button class="btn btn-sm btn-danger remove-item-btn" data-index="${index}">Remove</button>
+                                    <button class="btn btn-sm btn-danger remove-item-btn" data-index="${index}">Șterge</button>
                                 </div>
                             </div>
                         `;
                         cartContainer.innerHTML += cartItem;
                     });
                 }
-        
+
                 cartTotal.textContent = `RON${total.toFixed(2)}`;
-        
+
                 // Add event listeners for remove buttons
                 const removeButtons = document.querySelectorAll(".remove-item-btn");
                 removeButtons.forEach((button) => {
                     button.addEventListener("click", () => {
                         const itemIndex = button.dataset.index;
                         cart.splice(itemIndex, 1);
+                        saveCartToStorage(); // Save updated cart to local storage
                         updateCartCount();
                         renderCartItems();
                     });
                 });
             };
-        
+
             // Clear cart
             const clearCartButton = document.querySelector("#clear-cart");
             clearCartButton.addEventListener("click", () => {
                 cart = [];
+                saveCartToStorage(); // Save empty cart to local storage
                 updateCartCount();
                 renderCartItems();
             });
+
+            // Initialize the cart UI
+            updateCartCount();
+            renderCartItems();
         });
+
+        // Error handle
+            var background_image_parallax_2 = function($object, multiplier) {
+                if (!$object || $object.length === 0) {
+                    console.warn("Warning: $object is missing or undefined.");
+                    return;
+                }
+                
+                multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+                multiplier = 1 - multiplier;
+                var $doc = $(document);
+
+                $object.css({
+                    "background-attachment": "fixed"
+                });
+
+                $(window).scroll(function() {
+                    if ($(window).width() > 768) {
+                        var firstTop = $object.offset().top,
+                            pos = $(window).scrollTop(),
+                            yPos = Math.round((multiplier * (firstTop - pos)) - 186);
+
+                        var bg_css = 'center ' + yPos + 'px';
+
+                        $object.css({
+                            "background-position": bg_css
+                        });
+                    } else {
+                        $object.css({
+                            "background-position": "center"
+                        });
+                    }
+                });
+            };
         </script>
 
 </body>

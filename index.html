@@ -65,7 +65,7 @@
                             <a class="nav-link tm-nav-link" href="#home">Acasă</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link tm-nav-link animated-button" href="shop.html">
+                            <a class="nav-link tm-nav-link animated-button external-link" href="shop.html">
                                 Magazin Online <i class="fa fa-star text-warning ml-1"></i>
                             </a>
                         </li>
@@ -123,7 +123,7 @@
                     </div>
                 </div>
             </div>
-
+    
             <!-- PROMO CARD ROW -->
             <div class="row tm-content-box">
                 <!-- Promo 1 -->
@@ -134,7 +134,7 @@
                         <p>---</p>
                     </div>
                 </div>
-
+    
                 <!-- Promo 2 -->
                 <div class="col-lg-6 mb-4">
                     <div class="card">
@@ -144,8 +144,13 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Add more promo cards as needed -->
+    
+            <!-- Button to Online Shop -->
+            <div class="text-center mt-4">
+                <a href="shop.html" class="btn btn-primary btn-lg shadow-sm">
+                    <i class="fas fa-shopping-cart mr-2"></i> Mergi spre magazinul nostru online
+                </a>
+            </div>
         </div>
     </section>
 
@@ -553,12 +558,6 @@
             $('#tmNav a').on('click', function() {
                 $('.navbar-collapse').removeClass('show');
             })
-
-            // Scroll to corresponding section with animation
-            $('#tmNav').singlePageNav({
-                'easing': 'easeInOutExpo',
-                'speed': 600
-            });
 
             // Add smooth scrolling to all links
             // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
