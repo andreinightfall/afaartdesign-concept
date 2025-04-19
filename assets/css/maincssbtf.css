@@ -443,11 +443,6 @@ blockquote {
     opacity: 0.6;
 }
 
-#whatwedo .container {
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
 /* Testimonials */
 #testimonials {
     color: white;
@@ -905,6 +900,7 @@ p {
 }
 
 body {
+    font-family: Arial, sans-serif;
     background-color: #ffffff;
     overflow: hidden;
     /* Prevent scrolling during splash */

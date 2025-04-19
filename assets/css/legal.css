@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background: url('/img/pexels-eva-bronzini-7640904.jpg') no-repeat center center/cover;
+    background: url('../img/pexels-eva-bronzini-7640904.jpg') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -58,4 +58,24 @@ footer {
 
 footer a {
     color: #38B;
+}
+
+/* Align the logo in the header */
+.tm-next {
+    display: flex;
+    justify-content: center; /* This will center the logo */
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;  /* Adjust font size of the logo if necessary */
+    text-align: center;
+}
+
+/* Mobile adjustments (optional) */
+@media (max-width: 767px) {
+    .navbar-brand {
+        font-size: 1.5rem;  /* Adjust the font size for mobile */
+    }
 }
