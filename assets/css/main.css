@@ -381,66 +381,84 @@ blockquote {
 #promotii .container {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
 }
 
-#promotii .border {
-    border-color: rgba(255, 255, 255, 0.3) !important;
+/* Align Product Containers in a Row */
+#promotii .row.tm-content-box {
+    display: flex;
+    justify-content: center; /* Align product containers in the center horizontally */
+    gap: 10px; /* Add spacing between the containers */
+    flex-wrap: nowrap; /* Keep them in a row */
+    width: 100%; /* Ensure row takes full width */
 }
 
-#promotii .shadow-sm {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
-}
-
-#promotii h3 {
-    color: #fff;
-}
-
-#promotii p {
-    color: #eee;
-}
-
-/* Card Styling */
+/* Product Container Styling */
 #promotii .card {
     position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    overflow: hidden;
+    flex: 1 1 auto; /* Flexible sizing */
+    max-width: 400px; /* Limit the maximum width */
     padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 200px; /* Ensure consistent height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
 }
 
 #promotii .card:hover {
-    transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
-    border-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05); /* Add slight zoom on hover */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 #promotii .card h3,
 #promotii .card p {
-    transition: color 0.3s ease;
+    color: white; /* Ensure text inside cards is white */
+    margin: 10px 0;
+    word-wrap: break-word; /* Prevent text overflow */
 }
 
-#promotii .card:hover h3,
-#promotii .card:hover p {
-    color: #fff;
+/* Center the "Magazin Online" Button */
+#promotii .text-center {
+    margin-top: 40px;
+    text-align: center;
 }
 
-/* Overlay for Darkening Effect */
-#promotii .card .card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    transition: opacity 0.3s ease;
-    z-index: -1;
+#promotii .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-#promotii .card:hover .card-overlay {
-    opacity: 0.6;
+#promotii .btn-primary:hover {
+    background-color: #0056b3;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    #promotii .row.tm-content-box {
+        flex-wrap: wrap; /* Allow containers to wrap on smaller screens */
+        gap: 20px; /* Reduce gap for smaller screens */
+    }
+
+    #promotii .card {
+        max-width: 100%; /* Full width on smaller screens */
+        flex: 1 1 100%; /* Take full width on smaller devices */
+    }
 }
 
 #whatwedo .container {
