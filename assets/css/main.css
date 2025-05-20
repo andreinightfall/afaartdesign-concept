@@ -1038,28 +1038,46 @@ body {
     gap: 10px;
 }
 
+/* Common logo styles */
 .logo {
     opacity: 0;
     transform: translateY(50px);
     display: inline-block;
     transition: opacity 0.6s ease, transform 0.6s ease;
+    max-width: 300px; /* desktop default size */
+    height: auto;
 }
 
+/* Show logo */
 .logo.show {
     opacity: 1;
     transform: translateY(0);
 }
 
+/* Fade logo */
 .logo.fade {
     opacity: 0;
     transform: translateY(-50px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
+/* Hide splash */
 .hide-intro {
     opacity: 0;
     transform: translateY(-100%);
     pointer-events: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .desktop-logo {
+        display: none;
+    }
+    .mobile-logo {
+        display: inline-block;
+        max-width: 350px; /* smaller size on mobile */
+        height: auto;
+    }
 }
 
 

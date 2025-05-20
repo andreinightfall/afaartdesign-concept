@@ -58,9 +58,30 @@
     <div class="intro">
         <h1 class="logo-header">
             <span>
-                <img class="logo" src="assets/img/brand-logo.png">
+                <img class="logo desktop-logo" src="assets/img/brand-logo.png" alt="Desktop Logo">
+                <img class="logo mobile-logo" src="assets/img/brand-logo-full.png" alt="Mobile Logo">
+                <style>
+                    .mobile-logo {
+                        display: none;
+                    }
+
+                    /* Show mobile logo on smaller screens, hide desktop logo */
+                    @media (max-width: 768px) {
+                        .desktop-logo {
+                            display: none;
+                        }
+                        .mobile-logo {
+                            display: inline-block;
+                        }
+                    }
+
+                </style>
             </span>
         </h1>
+    </div>
+
+    <div id="content" style="display:none;">
+    <!-- Your main page content goes here -->
     </div>
 
     <script src="assets/js/splash.js"></script>
@@ -69,7 +90,6 @@
     <section id="home" class="text-white tm-font-big">
         <!-- Navigation -->
         <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
-        <div class="navbar-blur-bg"></div> <!-- Blur background -->
         <div class="container">
             <div class="tm-next">
             <a href="#home" class="navbar-brand">

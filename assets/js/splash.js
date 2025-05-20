@@ -1,16 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     const intro = document.querySelector('.intro');
-    const logoSpans = document.querySelectorAll('.logo');
-    const content = document.getElementById('content');  // Get the content div
+    // Only select visible logo (desktop or mobile)
+    const logoSpans = [...document.querySelectorAll('.logo')].filter(img => {
+        return window.getComputedStyle(img).display !== 'none';
+    });
+    const content = document.getElementById('content');  
 
-    // Show letters one by one for intro animation
+    // Show logo image (or images if you want)
     logoSpans.forEach((span, idx) => {
         setTimeout(() => {
             span.classList.add('show');
         }, idx * 400);
     });
 
-    // Fade out letters after delay
+    // Fade out logo after delay
     setTimeout(() => {
         logoSpans.forEach((span, idx) => {
             setTimeout(() => {
@@ -20,10 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }, 2000);
 
-    // Remove splash screen and display content
+    // Remove splash and reveal content
     setTimeout(() => {
         intro.classList.add('hide-intro');
-        document.body.style.overflow = "auto";  // Enable scrolling
-        content.style.display = 'block';  // Show the main content
-    }, 2500);  // Wait 3 seconds before showing the content
+        document.body.style.overflow = "auto";
+        content.style.display = 'block';
+    }, 2500);
 });
