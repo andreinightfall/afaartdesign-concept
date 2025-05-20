@@ -25,5 +25,5 @@ document.addEventListener("DOMContentLoaded", () => {
         intro.classList.add('hide-intro');
         document.body.style.overflow = "auto";  // Enable scrolling
         content.style.display = 'block';  // Show the main content
-    }, 3000);  // Wait 3 seconds before showing the content
+    }, 2500);  // Wait 3 seconds before showing the content
 });
