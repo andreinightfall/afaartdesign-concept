@@ -310,74 +310,6 @@ blockquote {
     .tm-hero-text-container-inner {
         margin-top: -40px;
     }
-
-    .tm-intro-next {
-        bottom: 20px;
-    }
-}
-
-/* Down Arrow */
-
-/* Container for the button - ensure it centers content */
-.tm-next.tm-intro-next {
-  text-align: center;
-  margin-top: 18%;
-}
-
-/* The clickable arrow button */
-.tm-down-arrow-link {
-  display: inline-flex;           /* shrink to content size, inline */
-  justify-content: center;        /* center content horizontally */
-  align-items: center;            /* center vertically */
-  background: #357;               /* original blue background */
-  padding: 16px 48px;
-  border-radius: 10px;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-  text-decoration: none;
-  /* Use background-color instead of background for smooth transition */
-  background-color: #357;
-  transition: background-color 0.5s ease;
-  /* Enable hardware acceleration for smoother animations */
-  will-change: background-color, transform;
-}
-
-/* Hover/focus background changes smoothly */
-.tm-down-arrow-link:hover,
-.tm-down-arrow-link:focus {
-  background-color: #2a6db7; /* pick a solid color close to gradient start for smooth transition */
-}
-
-/* The arrow icon itself */
-.tm-down-arrow {
-  pointer-events: none;           /* so hover is on the link */
-  transition: transform 0.3s ease;
-  display: inline-block;
-  /* To avoid flickering on animation restart, keep animation paused when not hovered */
-  animation-play-state: paused;
-}
-
-/* On hover, trigger the slide down/up animation */
-.tm-down-arrow-link:hover .tm-down-arrow {
-  animation-name: slideDownUp;
-  animation-duration: 0.6s;
-  animation-timing-function: ease;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
-}
-
-/* Keyframes for sliding arrow down and back up */
-@keyframes slideDownUp {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(8px);
-  }
-  100% {
-    transform: translateY(0);
-  }
 }
 
 /* Introduction */
@@ -403,22 +335,21 @@ blockquote {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed; /* Parallax effect */
+    background-attachment: fixed;
     position: relative;
     overflow: hidden;
-    padding: 100px 15px; /* Added padding for mobile spacing */
+    padding: 100px 15px;
 }
 
 @media (max-width: 991px) {
     #promotii {
-        background-attachment: scroll; /* Disable parallax on smaller screens */
+        background-attachment: scroll;
         background: transparent;
         background-image: url(../img/pexels-eva-bronzini-7640904.jpg);
-        padding: 80px 20px; /* Adjusted padding for better spacing */
+        padding: 80px 20px;
     }
 }
 
-/* Add flex and gap to content box for spacing */
 #promotii .tm-content-box {
     display: flex;
     flex-wrap: wrap;
@@ -426,17 +357,15 @@ blockquote {
     justify-content: center;
 }
 
-/* Make columns take half width minus half gap */
 #promotii .tm-content-box > .col-lg-6 {
-    flex: 1 1 calc(50% - 15px);
-    max-width: calc(50% - 15px);
+    flex: 1 1 calc(45% - 15px); /* Cards now narrower */
+    max-width: calc(45% - 15px);
     padding-left: 15px;
     padding-right: 15px;
     box-sizing: border-box;
     margin-bottom: 30px;
 }
 
-/* Stack columns on smaller screens */
 @media (max-width: 991px) {
     #promotii .tm-content-box > .col-lg-6 {
         flex: 1 1 100%;
@@ -478,13 +407,13 @@ blockquote {
     color: #eee;
 }
 
-/* Card Styling */
+/* Card Styling – pentru imagini verticale */
 #promotii .card {
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(8px);
-    border-radius: 15px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     overflow: hidden;
     padding: 20px;
@@ -497,6 +426,62 @@ blockquote {
     border-color: rgba(255, 255, 255, 0.3);
 }
 
+#promotii .card-img-top {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* Promo badge - now bigger */
+#promotii .card::before {
+    content: "PROMO";
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #ff2e2e;
+    color: white;
+    font-size: 0.9rem; /* was 0.75rem */
+    font-weight: 700;
+    padding: 7px 14px; /* was 5px 12px */
+    border-radius: 6px;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+#promotii .card-title {
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#promotii .card-text {
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: bold;
+    color: #ff2e2e;
+    animation: pulse 2s infinite;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0;
+}
+
+/* Pulse animation for price */
+@keyframes pulse {
+    0% {
+        color: #ff4d4d;
+    }
+    50% {
+        color: #ff9999;
+    }
+    100% {
+        color: #ff4d4d;
+    }
+}
+
 #promotii .card h3,
 #promotii .card p {
     transition: color 0.3s ease;
@@ -507,7 +492,7 @@ blockquote {
     color: #fff;
 }
 
-/* Overlay for Darkening Effect */
+/* Optional overlay (nefolosit momentan) */
 #promotii .card .card-overlay {
     position: absolute;
     top: 0;
@@ -523,6 +508,66 @@ blockquote {
     opacity: 0.6;
 }
 
+/* Responsive buttons: Contact + Magazin online */
+@media (max-width: 576px) {
+    #promotii .text-center .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    #promotii .text-center .btn:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* Button container for center alignment */
+.button-container {
+    display: flex;
+    justify-content: center; /* Aliniază butoanele pe centru */
+    gap: 15px; /* Spațiu între butoane */
+    flex-wrap: wrap; /* Permite butoanelor să se organizeze pe mai multe linii */
+    margin-top: 30px;
+}
+
+.button-container .btn {
+    font-size: 1.1rem; /* Dimensiunea textului pentru butoane */
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button-container .btn:hover {
+    transform: scale(1.05);
+}
+
+.button-container .btn-primary {
+    background-color: #3377aa; /* Stilul pentru butoanele de Contact și Magazin online */
+}
+
+.button-container .btn-primary:hover {
+    background-color: #225c88;
+}
+
+.button-container .btn-success {
+    background-color: #25d366; /* Stilul pentru butonul WhatsApp */
+    color: white;
+}
+
+.button-container .btn-success:hover {
+    background-color: #128c7e;
+}
+
+.button-container .btn i {
+    margin-right: 10px; /* Adaugă un spațiu între icon și text */
+}
+
+/* Bonus: Prevent horizontal overflow */
+#promotii {
+    overflow-x: hidden;
+}
+
+/* In case padding in container was not set */
 #whatwedo .container {
     padding-left: 30px;
     padding-right: 30px;
@@ -636,8 +681,12 @@ blockquote {
     margin: 0 15px;
 }
 
-/* Hover Effect */
-/* Common style */
+/* Gallery Container */
+.tm-container-gallery {
+    padding-top: 30px;
+}
+
+/* Hover Effect - Only keep basic hover for functionality, if you want hover effects on images, enable this */
 .grid figure {
     position: relative;
     float: left;
@@ -655,6 +704,7 @@ blockquote {
     opacity: 0.8;
 }
 
+/* Hover effect removed, as it may not be necessary for the Lightbox functionality */
 .grid figure figcaption {
     padding: 2em;
     color: #fff;
@@ -677,27 +727,7 @@ blockquote {
     height: 100%;
 }
 
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
-
-.grid figure h2 {
-    word-spacing: -0.15em;
-    font-size: 0.9em;
-    font-weight: 300;
-}
-
-.grid figure h2 span {
-    font-weight: 600;
-}
-
-.grid figure h2 {
-    margin: 0;
-}
-
-/*---------------*/
-/***** Honey *****/
-/*---------------*/
-
+/* Removed effects for 'effect-honey', as they are not necessary for the Lightbox */
 figure.effect-honey {
     background: #4a3753;
     max-width: 220px;
@@ -757,10 +787,6 @@ figure.effect-honey:hover h2 i {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-}
-
-.tm-container-gallery {
-    padding-top: 30px;
 }
 
 /* Contact */
@@ -888,6 +914,68 @@ p {
     .tm-gallery-item {
         margin: 0;
     }
+}
+
+/* Gallery Grid Layout - Row Style */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+.gallery a {
+  display: block;
+  width: 100%;
+}
+
+.gallery img {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.02);
+}
+
+/* Expandable Wrapper */
+.gallery-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, padding 0.3s ease;
+  padding: 0;
+}
+
+.gallery-wrapper.open {
+  max-height: 9999px;
+  padding: 16px 0;
+}
+
+/* Toggle Button */
+#toggleGalleryBtn {
+  display: block;
+  margin: 24px auto 8px;
+  padding: 11px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #3377aa, #225c88);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+#toggleGalleryBtn:hover {
+  background: linear-gradient(135deg, #225c88, #1b4970);
+  transform: scale(1.03);
 }
 
 /* Legal links */
@@ -1354,11 +1442,13 @@ body {
 
 /* Ensure icon stays centered and inside */
 .scroll-to-top i {
-    line-height: 1;
-    display: inline-block !important;
-    font-size: inherit;
+    font-size: 24px;  /* Adjust the size of the icon */
     margin: 0;
     padding: 0;
+    display: block;
+    line-height: 50px;  /* Match the height of the button to center vertically */
+    text-align: center;
+   
 }
 
 /* Hover effect */
@@ -1419,4 +1509,101 @@ body {
     50% {
         transform: translateX(-60%);
     }
+}
+
+/* Fancy Welcome Card */
+.white-link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.fancy-card {
+  background-color: rgba(0, 0, 0, 0.24); /* semi-transparent bg if over image */
+  padding: 2rem;
+  border-radius: 1rem;
+  display: inline-block;
+  color: white;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px); /* if you use glass effect */
+  animation: fadeIn 1s ease;
+}
+
+@media (max-width: 768px) {
+  .fancy-card {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+}
+
+/* Get Directions Button */
+.white-button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #3377AA, #223b5e);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.white-button i {
+  margin-right: 0.5rem;
+}
+
+.white-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.glowing-border {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.glowing-border::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(45deg, #3377AA, #223b5e, #3377AA);
+  border-radius: 40px;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0.6;
+  animation: pulse-border 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse-border {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
 }

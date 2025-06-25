@@ -49,6 +49,9 @@
     <link rel="stylesheet" href="slick/slick-theme.css" />
     <link rel="stylesheet" href="magnific-popup/dist/magnific-popup.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <!-- Lightbox2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -87,7 +90,7 @@
     <script src="assets/js/splash.js"></script>
 
     <!-- Hero section -->
-    <section id="home" class="text-white tm-font-big">
+    <section id="home" class="text-white tm-font-big tm-parallax">
         <!-- Navigation -->
         <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
         <div class="container">
@@ -127,22 +130,22 @@
         </nav>
 
         <div class="text-center tm-hero-text-container">
-            <div class="tm-hero-text-container-inner">
-                <h2 class="tm-hero-title">Bine ați venit la</h2>
-                <h2 class="tm-hero-title">Afa Art Design</h2>
-                <p class="tm-hero-subtitle">
-                    Gresie, parchet, vopsea decorativă, plinte, cornișe, riflaje.
-                    <br><i class="fa fa-1x fa-map-marker-alt mr-1"></i>
-                    Showroom pe Strada 1 Decembrie 1918, nr. 13, Galați.
-                </p>
-            </div>
+        <div class="tm-hero-text-container-inner fancy-card">
+            <h2 class="tm-hero-title">Bine ați venit la</h2>
+            <h2 class="tm-hero-title">Afa Art Design</h2>
+            <p class="tm-hero-subtitle">
+            Gresie, parchet, vopsea decorativă, plinte, cornișe, riflaje.
+            <br>
+            <i class="fas fa-map-marker-alt"></i>
+            Showroom pe Strada 1 Decembrie 1918, nr. 13, Galați.
+            <br><br>
+            <a class="white-button glowing-border" href="https://maps.app.goo.gl/48Nuk6GfGFjcPnEeA" target="_blank">
+                <i class="fas fa-location-arrow"></i> Obține indicații
+            </a>
+            </p>
+        </div>
         </div>
 
-        <div class="tm-next tm-intro-next">
-            <a href="#promotii" class="text-center tm-down-arrow-link">
-                <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
-            </a>
-        </div>
     </section>
 
     <!-- Promotii Section -->
@@ -154,30 +157,98 @@
         </p>
 
         <div class="row tm-content-box">
-        <article class="col-lg-6 mb-4 card" role="region" aria-label="Promoție Plăci Ceramice Model X">
-            <img src="assets/images/produs1.jpg" alt="Plăci ceramice premium" loading="lazy" class="card-img-top" />
+
+        <!-- Calota Gold -->
+        <article class="col-lg-6 mb-4 card" role="region" aria-label="Promoție Calota Gold">
+            <img src="assets/img/promo-calotagold.jpg" alt="Calota Gold" loading="lazy" class="card-img-top" />
             <div class="card-body">
-            <h3 class="card-title">Plăci Ceramice Premium Model ---</h3>
-            <p class="card-text">Oferta lunii: ---</p>
-            <a href="shop.html#produs1" class="btn btn-primary" aria-label="Vezi detalii despre Plăci Ceramice Model X">Vezi detalii</a>
+            <h3 class="card-title">Calota Gold – 60x120 cm</h3>
+            <p class="card-text"><span style="color: red; font-weight: bold;">69 RON/mp</span></p>
             </div>
         </article>
 
-        <article class="col-lg-6 mb-4 card" role="region" aria-label="Promoție Parchet Clasic">
-            <img src="assets/images/produs2.jpg" alt="Parchet" loading="lazy" class="card-img-top" />
+        <!-- Emi White -->
+        <article class="col-lg-6 mb-4 card" role="region" aria-label="Promoție Emi White">
+            <img src="assets/img/promo-emiwhite.jpg" alt="Emi White" loading="lazy" class="card-img-top" />
             <div class="card-body">
-            <h3 class="card-title">Parchet Premium SPC</h3>
-            <p class="card-text">Montaj gratuit la comandă ---</p>
-            <a href="shop.html#produs2" class="btn btn-primary" aria-label="Vezi detalii despre Parchet Clasic">Vezi detalii</a>
+            <h3 class="card-title">Emi White – 60x120 cm</h3>
+            <p class="card-text"><span style="color: red; font-weight: bold;">75 RON/mp</span></p>
             </div>
         </article>
+
+        <!-- Plazzo -->
+        <article class="col-lg-6 mb-4 card" role="region" aria-label="Promoție Plazzo">
+            <img src="assets/img/promo-plazzo.jpeg" alt="Plazzo" loading="lazy" class="card-img-top" />
+            <div class="card-body">
+            <h3 class="card-title">Plazzo – 60x120 cm</h3>
+            <p class="card-text"><span style="color: red; font-weight: bold;">75 RON/mp</span></p>
+            </div>
+        </article>
+
+        <!-- Naxo Aqua -->
+        <article class="col-lg-6 mb-4 card" role="region" aria-label="Promoție Naxo Aqua">
+            <img src="assets/img/promo-naxo.jpeg" alt="Naxo Aqua" loading="lazy" class="card-img-top" />
+            <div class="card-body">
+            <h3 class="card-title">Naxo Aqua – 60x120 cm</h3>
+            <p class="card-text"><span style="color: red; font-weight: bold;">75 RON/mp</span></p>
+            </div>
+        </article>
+
+        <!-- Moro Black -->
+        <article class="col-lg-6 mb-4 card" role="region" aria-label="Promoție Moro Black">
+            <img src="assets/img/promo-moroblack.jpg" alt="Moro Black" loading="lazy" class="card-img-top" />
+            <div class="card-body">
+            <h3 class="card-title">Moro Black – 60x120 cm</h3>
+            <p class="card-text"><span style="color: red; font-weight: bold;">75 RON/mp</span></p>
+            </div>
+        </article>
+
+        <!-- Platinum Black -->
+        <article class="col-lg-6 mb-4 card" role="region" aria-label="Promoție Platinum Black">
+            <img src="assets/img/promo-platinumblack.jpg" alt="Platinum Black" loading="lazy" class="card-img-top" />
+            <div class="card-body">
+            <h3 class="card-title">Platinum Black – 60x120 cm</h3>
+            <p class="card-text"><span style="color: red; font-weight: bold;">75 RON/mp</span></p>
+            </div>
+        </article>
+
+        <!-- Brazil 1 -->
+        <article class="col-lg-6 mb-4 card" role="region" aria-label="Promoție Brazil 1">
+            <img src="assets/img/promo-brazil.jpeg" alt="Brazil 1" loading="lazy" class="card-img-top" />
+            <div class="card-body">
+            <h3 class="card-title">Brazil 1 – 60.5x121 cm</h3>
+            <p class="card-text"><span style="color: red; font-weight: bold;">79,99 RON/mp</span></p>
+            </div>
+        </article>
+
+        <!-- Aspire Gold -->
+        <article class="col-lg-6 mb-4 card" role="region" aria-label="Promoție Aspire Gold">
+            <img src="assets/img/promo-aspiregold.jpg" alt="Aspire Gold" loading="lazy" class="card-img-top" />
+            <div class="card-body">
+            <h3 class="card-title">Aspire Gold – 60x120 cm</h3>
+            <p class="card-text"><span style="color: red; font-weight: bold;">79,99 RON/mp</span></p>
+            </div>
+        </article>
+
         </div>
 
-        <div class="text-center mt-4">
-        <a href="shop.html" class="btn btn-primary btn-lg shadow-sm" aria-label="Accesează magazinul online">
-            <i class="fas fa-shopping-cart mr-2"></i> Magazin online
-        </a>
+        <div class="text-center mt-4 button-container">
+            <!-- Buton Contact -->
+            <a href="tel:+40790323945" class="btn btn-primary btn-lg shadow-sm" aria-label="Contactează-ne telefonic">
+                <i class="fas fa-phone mr-2"></i> Contactează-ne acum!
+            </a>
+
+            <!-- Buton Magazin online -->
+            <a href="shop.html" class="btn btn-primary btn-lg shadow-sm" aria-label="Accesează magazinul online">
+                <i class="fas fa-shopping-cart mr-2"></i> Magazin online
+            </a>
+
+            <!-- Buton WhatsApp -->
+            <a href="https://wa.me/+40790323945" target="_blank" class="btn btn-success btn-lg shadow-sm" aria-label="Scrie-ne pe WhatsApp">
+                <i class="fab fa-whatsapp mr-2"></i> Scrie-ne pe WhatsApp
+            </a>
         </div>
+
     </div>
     </section>
 
@@ -221,12 +292,11 @@
                             ↪️ Cam tot ce vrei ca să îți decorezi casa visurilor tale!</p>
                     </div>
                 </div>
-
             </div><!-- first row -->
             
             <div class="row tm-content-box"><!-- second row -->
-                <div class="col-lg-1">
-                    <i class="fas fa-3x fa-paint-roller text-center tm-icon"></i>
+                <div class="col-lg-1 d-flex align-items-center justify-content-start">
+                    <i class="fas fa-3x fa-paint-roller tm-icon"></i>
                 </div>
                 <div class="col-lg-5">
                     <div class="tm-intro-text-container">
@@ -235,8 +305,8 @@
                     </div>
                 </div>
 
-                <div class="col-lg-1">
-                    <i class="fas fa-3x fa-layer-group text-center tm-icon"></i>
+                <div class="col-lg-1 d-flex align-items-center justify-content-start">
+                    <i class="fas fa-3x fa-layer-group tm-icon"></i>
                 </div>
                 <div class="col-lg-5">
                     <div class="tm-intro-text-container">
@@ -244,11 +314,10 @@
                         <p class="mb-4 tm-intro-text">Eleganță și durabilitate pentru casa ta! Comercializăm și montăm parchet SPC, parchet herringbone din gama Kronotex, parchet laminat din gama MyFloor Germania, riflaje decorative și profile platbandă din inox – detalii care fac diferența.</p>
                     </div>
                 </div>
-
             </div><!-- second row -->
 
             <div class="row tm-content-box"><!-- third row -->
-                <div class="col-lg-1">
+                <div class="col-lg-1 d-flex align-items-center justify-content-start">
                     <i class="fas fa-3x fa-fill-drip tm-icon"></i>
                 </div>
                 <div class="col-lg-5">
@@ -258,7 +327,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-1">
+                <div class="col-lg-1 d-flex align-items-center justify-content-start">
                     <i class="fas fa-3x fa-th-large tm-icon"></i>
                 </div>
                 <div class="col-lg-5">
@@ -267,11 +336,8 @@
                         <p class="mb-4 tm-intro-text">Lux și rafinament în fiecare detaliu! Vă oferim plăci ceramice premium, alese pentru calitate și aspect exclusivist, alături de un montaj impecabil.</p>
                     </div>
                 </div>
-
             </div><!-- third row -->
-
         </div>
-
     </section>
 
     <section id="testimonials" class="tm-section-pad-top tm-parallax-2">
@@ -318,88 +384,30 @@
     </section>
 
     <section id="gallery" class="tm-section-pad-top">
-        <div class="container tm-container-gallery">
-            <div class="row">
-                <div class="text-center col-12">
-                    <h2 class="tm-text-primary tm-section-title mb-4">Galerie</h2>
-                    <p class="mx-auto tm-section-desc">
-                        Uite câteva dintre cele mai tari lucrări ale noastre. Vopsele decorative, tencuieli, riflaje, parchet sau plăci ceramice premium – le facem pe toate să arate genial. Hai să te inspiri din proiectele noastre. 👀
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="mx-auto tm-gallery-container">
-                        <div class="grid tm-gallery">
-                            <a href="./assets/img/zen5.jpg">
-                                <figure class="effect-honey tm-gallery-item">
-                                    <img src="./assets/img/thumbnails/zen5tn.jpg" alt="Image 1" class="img-fluid">
-                                    <figcaption>
-                                        <h2><i>Piatră Zen<span></span></i></h2>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="./assets/img/parchet1.jpg">
-                                <figure class="effect-honey tm-gallery-item">
-                                    <img src="./assets/img/thumbnails/parchet1tn.jpg" alt="Image 2" class="img-fluid">
-                                    <figcaption>
-                                        <h2><i>Parchet<span></span></i></h2>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="./assets/img/piatrasp.jpg">
-                                <figure class="effect-honey tm-gallery-item">
-                                    <img src="./assets/img/thumbnails/piatrasptn.jpg" alt="Image 3" class="img-fluid">
-                                    <figcaption>
-                                        <h2><i>Piatră Spartă<span></span></i></h2>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="./assets/img/stuccoven4.jpg">
-                                <figure class="effect-honey tm-gallery-item">
-                                    <img src="./assets/img/thumbnails/stuccoven4tn.jpg" alt="Image 4" class="img-fluid">
-                                    <figcaption>
-                                        <h2><i>Stucco Veneziano<span></span></i></h2>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="./assets/img/psp1.jpg">
-                                <figure class="effect-honey tm-gallery-item">
-                                    <img src="./assets/img/thumbnails/psp1tn.jpg" alt="Image 5" class="img-fluid">
-                                    <figcaption>
-                                        <h2><i>Piatră Spartă<span></span></i></h2>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="./assets/img/psp2.jpg">
-                                <figure class="effect-honey tm-gallery-item">
-                                    <img src="./assets/img/thumbnails/psp2tn.jpg" alt="Image 6" class="img-fluid">
-                                    <figcaption>
-                                        <h2><i>Piatră Spartă<span></span></i></h2>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="./assets/img/psp3-2.jpg">
-                                <figure class="effect-honey tm-gallery-item">
-                                    <img src="./assets/img/thumbnails/psp3-2tn.jpg" alt="Image 7" class="img-fluid">
-                                    <figcaption>
-                                        <h2><i>Piatră Spartă<span></span></i></h2>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="./assets/img/psp4.jpg">
-                                <figure class="effect-honey tm-gallery-item">
-                                    <img src="./assets/img/psp4.jpg" alt="Image 8" class="img-fluid">
-                                    <figcaption>
-                                        <h2><i>Piatră Spartă<span></span></i></h2>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <div class="container tm-container-gallery">
+        <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="tm-text-primary tm-section-title mb-4">Galerie</h2>
+            <p class="mx-auto tm-section-desc">
+            Uite câteva dintre cele mai tari lucrări ale noastre. 😉
+            </p>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col-12 text-center">
+            <button id="toggleGalleryBtn">Vezi galeria completă ⬇️</button>
+        </div>
+        </div>
+
+        <div class="row">
+        <div class="col-12">
+            <div class="gallery-wrapper" id="galleryWrapper">
+            <div class="grid gallery"></div>
             </div>
         </div>
+        </div>
+    </div>
     </section>
 
     <!-- TikTok Section -->
@@ -407,6 +415,22 @@
         <h2 class="tm-hero-title"><i class="fab fa-tiktok"></i> Suntem pe TikTok!</h2>
         <br>
         <div id="tiktok-carousel" class="carousel">
+            <div>
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@afaartdesign/video/7517658527423401238" data-video-id="7517658527423401238" style="max-width: 605px;min-width: 325px;" > 
+                    <section> <a target="_blank" title="@afaartdesign" href="https://www.tiktok.com/@afaartdesign?refer=embed">@afaartdesign</a> <p>📢 Plăci ceramice premium la prețuri speciale doar la Afa Art Design Galați! 📍 Vino în showroom și prinde oferta! . . . #gresie #designinterior #amenajari #homeinspo #renovare #afagresie #galati #promotie #interiorstyle #reducere #gresiegalați #tiktokromania</p> <a target="_blank" title="♬ original sound  - Afa Art Design" href="https://www.tiktok.com/music/original-sound-Afa-Art-Design-7517658543017806614?refer=embed">♬ original sound  - Afa Art Design</a> </section> 
+                </blockquote> 
+                <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+            <div>
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@afaartdesign/video/7516187720759201046" data-video-id="7516187720759201046" style="max-width: 605px;min-width: 325px;" > 
+                    <section> <a target="_blank" title="@afaartdesign" href="https://www.tiktok.com/@afaartdesign?refer=embed">@afaartdesign</a> <p></p> <a target="_blank" title="♬ It&#39;s Amazing - DeeDee  Chipmunk" href="https://www.tiktok.com/music/It's-Amazing-7457634805632174096?refer=embed">♬ It&#39;s Amazing - DeeDee  Chipmunk</a> </section> 
+                </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
+            <div>
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@afaartdesign/video/7511665399423880470" data-video-id="7511665399423880470" style="max-width: 605px;min-width: 325px;" > 
+                    <section> <a target="_blank" title="@afaartdesign" href="https://www.tiktok.com/@afaartdesign?refer=embed">@afaartdesign</a> <a title="piatrăspartă" target="_blank" href="https://www.tiktok.com/tag/piatr%C4%83spart%C4%83?refer=embed">#piatrăspartă</a> <a title="contrablat" target="_blank" href="https://www.tiktok.com/tag/contrablat?refer=embed">#contrablat</a> <a target="_blank" title="♬ orijinal ses - ♥️𝐘𝐀𝐒𝐄𝐌𝐈𝐍.𝐌𝐔𝐒𝐈𝐂➳🦅" href="https://www.tiktok.com/music/orijinal-ses-7475388329262582544?refer=embed">♬ orijinal ses - ♥️𝐘𝐀𝐒𝐄𝐌𝐈𝐍.𝐌𝐔𝐒𝐈𝐂➳🦅</a> </section> 
+                </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+            </div>
             <div>
                 <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@afaartdesign/video/7504962010916998422" data-video-id="7504962010916998422" style="max-width: 605px;min-width: 325px;" > 
                     <section> <a target="_blank" title="@afaartdesign" href="https://www.tiktok.com/@afaartdesign?refer=embed">@afaartdesign</a> <p></p> <a target="_blank" title="♬ som original - SK Music🎧" href="https://www.tiktok.com/music/som-original-7351546575446018821?refer=embed">♬ som original - SK Music🎧</a> </section> 
@@ -514,7 +538,7 @@
                         </li>
 
                         <li class="contact-item">
-                            <a rel="nofollow" href="https://www.facebook.com/profile.php?id=100075829431799" class="item-link" target="_blank">
+                            <a rel="nofollow" href="https://www.facebook.com/afaartdesign" class="item-link" target="_blank">
                                 <div class="icon-column">
                                     <i class="fab fa-1x fa-facebook mr-4"></i>
                                 </div>
@@ -658,6 +682,8 @@
     <script src="assets/js/easing.min.js"></script>
     <script src="assets/js/jquery.singlePageNav.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script src="assets/js/lightbox.js"></script>
     <script>
         function getOffSet() {
             var _offset = 450;
