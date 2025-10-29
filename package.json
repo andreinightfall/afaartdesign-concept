@@ -2,7 +2,7 @@
   "dependencies": {
     "@fancyapps/ui": "^6.0.4",
     "bootstrap": "^5.3.5",
-    "lightgallery": "^2.9.0-beta.1",
+    "lightgallery": "^2.9.0",
     "magnific-popup": "^1.2.0"
   },
   "devDependencies": {
